@@ -239,45 +239,116 @@
 
 <!-- ===== DEMO PROJECT ===== -->
 <section id="demo">
-  <p class="section-label">Demo Project</p>
-  <h2 class="section-title">Predictive Maintenance Pipeline</h2>
+  <p class="section-label">Featured Project</p>
+  <h2 class="section-title">Predictive Maintenance on NASA CMAPSS</h2>
 
-  <div class="demo-intro">
-    <div>
+  <!-- Real implementation callout -->
+  <div class="repo-callout">
+    <div class="repo-callout-text">
+      <p class="section-label" style="margin-bottom:0.5rem;">Open-source implementation</p>
+      <h3 style="font-size:1.4rem;margin-bottom:0.5rem;color:var(--text-primary);">predictive-maintenance-cmapss</h3>
       <p style="margin-bottom:1rem;">
-        A simulated end-to-end predictive maintenance system modeled after real industrial use cases.
-        Using the NASA CMAPSS turbofan degradation dataset as reference, this demo illustrates
-        the full data-to-insight journey: sensor ingestion, anomaly detection, RUL prediction,
-        and health monitoring.
+        An end-to-end Python pipeline on NASA's CMAPSS turbofan degradation dataset —
+        strict-schema data loader, feature engineering, baseline and
+        gradient-boosted RUL regressors, with executed Jupyter notebooks
+        showing every result.
       </p>
-      <p style="margin-bottom:1rem;">
-        All data is synthetically generated for demonstration — no proprietary information is used.
-      </p>
-      <div class="demo-stack">
+      <div class="repo-stats">
+        <div class="repo-stat"><span class="repo-stat-num">96%</span><span class="repo-stat-label">test coverage</span></div>
+        <div class="repo-stat"><span class="repo-stat-num">59</span><span class="repo-stat-label">tests passing</span></div>
+        <div class="repo-stat"><span class="repo-stat-num">3.11–3.13</span><span class="repo-stat-label">Python matrix CI</span></div>
+        <div class="repo-stat"><span class="repo-stat-num">MIT</span><span class="repo-stat-label">licensed</span></div>
+      </div>
+      <div class="demo-stack" style="margin-top:1.25rem;">
         <span class="tag">Python</span>
-        <span class="tag">Plotly</span>
         <span class="tag">scikit-learn</span>
         <span class="tag">XGBoost</span>
-        <span class="tag">Docker</span>
+        <span class="tag">pandas</span>
+        <span class="tag">Plotly</span>
+        <span class="tag">Jupyter</span>
         <span class="tag">GitHub Actions</span>
-        <span class="tag">Azure Data Factory</span>
+        <span class="tag">uv</span>
+        <span class="tag">ruff / mypy</span>
       </div>
     </div>
-
-    <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;">
-      <p class="section-label" style="margin-bottom:0.75rem;">Scenario</p>
-      <p style="font-size:0.875rem;margin-bottom:0.75rem;">
-        Rotating industrial equipment (pump / compressor) monitored across <strong style="color:var(--text-primary);">300 operating cycles</strong>.
-        Three sensors — vibration, temperature, pressure — feed a real-time health scoring model.
-        When the health score drops below 30%, a maintenance alert is triggered.
-      </p>
-      <p style="font-size:0.875rem;">
-        The charts below update reactively — hover or zoom to explore the degradation pattern and model predictions.
-      </p>
+    <div class="repo-callout-actions">
+      <a href="https://github.com/eastani/predictive-maintenance-cmapss" target="_blank" class="btn btn-primary" style="justify-content:center;">
+        &#128187; View on GitHub
+      </a>
+      <a href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/README.md" target="_blank" class="btn btn-secondary" style="justify-content:center;">
+        &#128214; Read the README
+      </a>
     </div>
   </div>
 
-  <!-- Charts -->
+  <!-- Real notebook results -->
+  <p class="section-label" style="margin-top:3rem;">Results from the executed notebooks</p>
+  <h3 style="font-size:1.3rem;margin-bottom:0.5rem;">Real benchmarks on FD001</h3>
+  <p style="margin-bottom:2rem;color:var(--text-muted);max-width:680px;">
+    Every figure below is rendered straight from the executed notebook in the repository — click any
+    card to open the full notebook on GitHub.
+  </p>
+
+  <div class="showcase-grid">
+    <a class="showcase-card" href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/notebooks/01_eda.ipynb" target="_blank">
+      <img src="assets/img/eda_failure_alignment.png" alt="Sensor 11 aligned to failure across 25 training units" loading="lazy">
+      <div class="showcase-body">
+        <h4>EDA — trajectories aligned to failure</h4>
+        <p>25 training units, sensor 11 plotted vs. cycles before failure. Clean monotonic drift in the last ~80 cycles motivates the piecewise-linear RUL relabelling.</p>
+      </div>
+    </a>
+
+    <a class="showcase-card" href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/notebooks/01_eda.ipynb" target="_blank">
+      <img src="assets/img/eda_rul_clipping.png" alt="RUL distribution before and after piecewise-linear clipping at 125 cycles" loading="lazy">
+      <div class="showcase-body">
+        <h4>RUL distribution — raw vs. clipped</h4>
+        <p>Capping the regression target at 125 cycles concentrates model capacity on the regime where degradation is observable. Heimes (2008) convention.</p>
+      </div>
+    </a>
+
+    <a class="showcase-card" href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/notebooks/02_baseline_rul.ipynb" target="_blank">
+      <img src="assets/img/baseline_pred_vs_true.png" alt="Ridge baseline predictions vs true RUL on FD001 test set" loading="lazy">
+      <div class="showcase-body">
+        <h4>Ridge baseline — RMSE 18.27 / S-score 592.6</h4>
+        <p>Standard-scaled L2 regression on rolling features. Sets the floor that any non-linear model must clearly beat to justify its complexity.</p>
+      </div>
+    </a>
+
+    <a class="showcase-card" href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/notebooks/03_xgboost_rul.ipynb" target="_blank">
+      <img src="assets/img/xgboost_comparison.png" alt="Ridge baseline vs XGBoost predictions side by side" loading="lazy">
+      <div class="showcase-body">
+        <h4>XGBoost head-to-head — RMSE 18.23 / S-score 814.8</h4>
+        <p>Tuned XGBoost edges out Ridge on RMSE but loses on the asymmetric S-score. The honest result: FD001's single regime is exactly where linear features compete with trees.</p>
+      </div>
+    </a>
+
+    <a class="showcase-card" href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/notebooks/03_xgboost_rul.ipynb" target="_blank">
+      <img src="assets/img/xgboost_feature_importance.png" alt="Top 15 XGBoost features by gain" loading="lazy">
+      <div class="showcase-body">
+        <h4>Feature importance corroborates the EDA</h4>
+        <p>Rolling statistics on high-pressure-compressor sensors dominate — exactly the channels whose drift was visible in the EDA notebook.</p>
+      </div>
+    </a>
+
+    <a class="showcase-card showcase-card--ghost" href="https://github.com/eastani/predictive-maintenance-cmapss" target="_blank">
+      <div class="showcase-body" style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;height:100%;">
+        <p class="section-label" style="margin-bottom:0.5rem;">Coming next</p>
+        <h4 style="margin-bottom:0.5rem;">FD002 / FD004 multi-regime evaluation</h4>
+        <p style="margin-bottom:0.75rem;">Operating-regime clustering, regime-aware normalisation, and an LSTM sequence model over full trajectories — the setting where XGBoost is expected to clearly win.</p>
+        <span style="color:var(--accent);font-size:0.85rem;font-weight:600;">Track progress on GitHub →</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- Interactive concept preview -->
+  <p class="section-label" style="margin-top:4rem;">Interactive concept preview</p>
+  <h3 style="font-size:1.3rem;margin-bottom:0.5rem;">Synthetic dashboard — live in your browser</h3>
+  <p style="margin-bottom:2rem;color:var(--text-muted);max-width:680px;">
+    A self-contained Plotly visualisation of what the same pipeline looks like running against
+    real-time sensor streams. The data is synthetic so the page stays static — for the actual
+    benchmark numbers, see the cards above.
+  </p>
+
   <div class="chart-grid">
     <div class="chart-card wide">
       <h3>Multi-Sensor Time Series — Degradation Monitoring</h3>
@@ -300,27 +371,23 @@
         <div id="chart-gauge" style="height:260px;"></div>
       </div>
       <div>
-        <p class="section-label" style="margin-bottom:0.5rem;">Model Details</p>
+        <p class="section-label" style="margin-bottom:0.5rem;">Concept summary</p>
         <table style="width:100%;font-size:0.82rem;border-collapse:collapse;">
           <tr style="border-bottom:1px solid var(--border);">
-            <td style="padding:0.5rem 0;color:var(--text-muted);">Algorithm</td>
-            <td style="padding:0.5rem 0;color:var(--text-primary);font-weight:600;">XGBoost + LSTM ensemble</td>
+            <td style="padding:0.5rem 0;color:var(--text-muted);">Sensors</td>
+            <td style="padding:0.5rem 0;color:var(--text-primary);">Vibration, Temperature, Pressure</td>
           </tr>
           <tr style="border-bottom:1px solid var(--border);">
-            <td style="padding:0.5rem 0;color:var(--text-muted);">Input features</td>
-            <td style="padding:0.5rem 0;color:var(--text-primary);">Vibration, Temp, Pressure, RPM</td>
-          </tr>
-          <tr style="border-bottom:1px solid var(--border);">
-            <td style="padding:0.5rem 0;color:var(--text-muted);">Prediction target</td>
-            <td style="padding:0.5rem 0;color:var(--text-primary);">RUL (cycles), Health Score</td>
+            <td style="padding:0.5rem 0;color:var(--text-muted);">Cycles</td>
+            <td style="padding:0.5rem 0;color:var(--text-primary);">300 operating cycles</td>
           </tr>
           <tr style="border-bottom:1px solid var(--border);">
             <td style="padding:0.5rem 0;color:var(--text-muted);">Alert threshold</td>
-            <td style="padding:0.5rem 0;color:#ff4444;font-weight:600;">RUL &lt; 30 cycles</td>
+            <td style="padding:0.5rem 0;color:#ff4444;font-weight:600;">Health score &lt; 30%</td>
           </tr>
           <tr>
-            <td style="padding:0.5rem 0;color:var(--text-muted);">Deployment</td>
-            <td style="padding:0.5rem 0;color:var(--text-primary);">Docker + Azure Container Apps</td>
+            <td style="padding:0.5rem 0;color:var(--text-muted);">Implementation</td>
+            <td style="padding:0.5rem 0;color:var(--accent);font-weight:600;"><a href="https://github.com/eastani/predictive-maintenance-cmapss" target="_blank" style="color:inherit;">eastani/predictive-maintenance-cmapss ↗</a></td>
           </tr>
         </table>
       </div>
