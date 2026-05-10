@@ -22,13 +22,14 @@
 <nav>
   <a href="#hero" class="nav-logo">NH.</a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#demo">Demo</a></li>
-    <li><a href="#architecture">Architecture</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about" data-i18n="nav.about">About</a></li>
+    <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+    <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+    <li><a href="#demo" data-i18n="nav.demo">Demo</a></li>
+    <li><a href="#architecture" data-i18n="nav.architecture">Architecture</a></li>
+    <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
   </ul>
+  <button id="lang-toggle" type="button" class="lang-toggle" data-i18n="nav.toggle" data-i18n-aria-label="nav.toggle.aria" aria-label="Switch to Japanese">日本語</button>
 </nav>
 
 <!-- ===== HERO ===== -->
@@ -37,36 +38,36 @@
   <div class="hero-grid"></div>
 
   <div class="hero-content">
-    <div class="hero-badge">Available for new opportunities</div>
+    <div class="hero-badge" data-i18n="hero.badge">Available for new opportunities</div>
 
-    <h1 class="hero-title">
+    <h1 class="hero-title" data-i18n="hero.title">
       Industrial <span class="highlight">Data Engineer</span><br />
       & AI Solutions Builder
     </h1>
 
-    <p class="hero-desc">
+    <p class="hero-desc" data-i18n="hero.desc">
       I bridge the gap between raw industrial sensor data and actionable intelligence —
       designing scalable data pipelines, predictive maintenance models, and AI-powered
       dashboards for heavy industries.
     </p>
 
     <div class="hero-cta">
-      <a href="#demo" class="btn btn-primary">&#9654; View Live Demo</a>
-      <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+      <a href="#demo" class="btn btn-primary" data-i18n="hero.cta_demo">&#9654; View Live Demo</a>
+      <a href="#contact" class="btn btn-secondary" data-i18n="hero.cta_contact">Get in Touch</a>
     </div>
 
     <div class="hero-stats">
       <div>
-        <div class="stat-value">4+</div>
-        <div class="stat-label">Years in Industrial Data &amp; Quality Engineering</div>
+        <div class="stat-value" data-i18n="hero.stat1">4+</div>
+        <div class="stat-label" data-i18n="hero.stat1_label">Years in Industrial Data &amp; Quality Engineering</div>
       </div>
       <div>
-        <div class="stat-value">AI</div>
-        <div class="stat-label">Predictive Maintenance &amp; Anomaly Detection</div>
+        <div class="stat-value" data-i18n="hero.stat2">AI</div>
+        <div class="stat-label" data-i18n="hero.stat2_label">Predictive Maintenance &amp; Anomaly Detection</div>
       </div>
       <div>
-        <div class="stat-value">Global</div>
-        <div class="stat-label">Cross-border R&amp;D &amp; Stakeholder Coordination</div>
+        <div class="stat-value" data-i18n="hero.stat3">Global</div>
+        <div class="stat-label" data-i18n="hero.stat3_label">Cross-border R&amp;D &amp; Stakeholder Coordination</div>
       </div>
     </div>
   </div>
@@ -76,24 +77,24 @@
 <section id="about">
   <div class="about-grid">
     <div class="about-text">
-      <p class="section-label">About Me</p>
-      <h2 class="section-title">Turning Industrial Data<br/>into <span class="accent">Operational Intelligence</span></h2>
+      <p class="section-label" data-i18n="about.label">About Me</p>
+      <h2 class="section-title" data-i18n="about.title">Turning Industrial Data<br/>into <span class="accent">Operational Intelligence</span></h2>
 
-      <p style="margin-top:1.5rem;">
+      <p style="margin-top:1.5rem;" data-i18n="about.p1">
         I'm an engineer working at the intersection of data, AI, and
         product reliability — building and supporting predictive
         maintenance, quality analytics, and design-verification
         workflows for globally deployed precision instruments in a
         regulated industry.
       </p>
-      <p>
+      <p data-i18n="about.p2">
         At Hitachi High-Technologies, I contribute to fleet-scale AI
         predictive maintenance development with international R&amp;D
         partners, drive root-cause analytics on operational telemetry,
         and act as the bridge between equipment domain knowledge and
         the data-science teams that turn it into models.
       </p>
-      <p>
+      <p data-i18n="about.p3">
         I'm passionate about bridging the OT / IT gap in regulated,
         mission-critical industries, and I thrive in environments where
         data engineering and hands-on domain expertise combine to drive
@@ -101,33 +102,33 @@
       </p>
 
       <div class="about-tags">
-        <span class="tag">Predictive Maintenance</span>
-        <span class="tag">Industrial IoT</span>
-        <span class="tag">Time-Series Analysis</span>
-        <span class="tag">Anomaly Detection</span>
-        <span class="tag">Quality Analytics</span>
-        <span class="tag">Cross-border Collaboration</span>
-        <span class="tag">AI / ML</span>
+        <span class="tag" data-i18n="about.tag1">Predictive Maintenance</span>
+        <span class="tag" data-i18n="about.tag2">Industrial IoT</span>
+        <span class="tag" data-i18n="about.tag3">Time-Series Analysis</span>
+        <span class="tag" data-i18n="about.tag4">Anomaly Detection</span>
+        <span class="tag" data-i18n="about.tag5">Quality Analytics</span>
+        <span class="tag" data-i18n="about.tag6">Cross-border Collaboration</span>
+        <span class="tag" data-i18n="about.tag7">AI / ML</span>
       </div>
     </div>
 
     <div class="value-cards">
-      <p class="section-label">What I Bring</p>
+      <p class="section-label" data-i18n="about.value_label">What I Bring</p>
       <div class="value-card">
-        <h4>Domain Expertise</h4>
-        <p>Hands-on understanding of operational data from globally deployed precision instruments — failure modes, sensor characteristics, and end-user maintenance workflows.</p>
+        <h4 data-i18n="about.v1_h">Domain Expertise</h4>
+        <p data-i18n="about.v1_p">Hands-on understanding of operational data from globally deployed precision instruments — failure modes, sensor characteristics, and end-user maintenance workflows.</p>
       </div>
       <div class="value-card">
-        <h4>Full-Stack Data Engineering</h4>
-        <p>From raw sensor ingestion (REST/Kafka) to data modeling, cleansing, transformation, and visualization — I own the full pipeline.</p>
+        <h4 data-i18n="about.v2_h">Full-Stack Data Engineering</h4>
+        <p data-i18n="about.v2_p">From raw sensor ingestion (REST/Kafka) to data modeling, cleansing, transformation, and visualization — I own the full pipeline.</p>
       </div>
       <div class="value-card">
-        <h4>AI-Augmented Solutions</h4>
-        <p>Building ML models and AI agents that translate data patterns into actionable maintenance decisions, not just dashboards.</p>
+        <h4 data-i18n="about.v3_h">AI-Augmented Solutions</h4>
+        <p data-i18n="about.v3_p">Building ML models and AI agents that translate data patterns into actionable maintenance decisions, not just dashboards.</p>
       </div>
       <div class="value-card">
-        <h4>Cloud & DevOps Mindset</h4>
-        <p>CI/CD-first development with Docker, GitHub Actions, and Azure — building solutions that scale beyond the initial pilot.</p>
+        <h4 data-i18n="about.v4_h">Cloud & DevOps Mindset</h4>
+        <p data-i18n="about.v4_p">CI/CD-first development with Docker, GitHub Actions, and Azure — building solutions that scale beyond the initial pilot.</p>
       </div>
     </div>
   </div>
@@ -135,13 +136,13 @@
 
 <!-- ===== SKILLS ===== -->
 <section id="skills">
-  <p class="section-label">Technical Skills</p>
-  <h2 class="section-title">Stack &amp; Tooling</h2>
-  <p class="section-subtitle">Built around the industrial data &amp; AI engineering lifecycle — from edge sensor to executive dashboard.</p>
+  <p class="section-label" data-i18n="skills.label">Technical Skills</p>
+  <h2 class="section-title" data-i18n="skills.title">Stack &amp; Tooling</h2>
+  <p class="section-subtitle" data-i18n="skills.subtitle">Built around the industrial data &amp; AI engineering lifecycle — from edge sensor to executive dashboard.</p>
 
   <div class="skills-grid">
     <div class="skill-category">
-      <h3>Languages</h3>
+      <h3 data-i18n="skills.cat_lang">Languages</h3>
       <div class="skill-items">
         <span class="skill-item primary">Python</span>
         <span class="skill-item">SQL</span>
@@ -151,7 +152,7 @@
     </div>
 
     <div class="skill-category">
-      <h3>Data &amp; ML</h3>
+      <h3 data-i18n="skills.cat_data">Data &amp; ML</h3>
       <div class="skill-items">
         <span class="skill-item primary">pandas / NumPy</span>
         <span class="skill-item primary">scikit-learn</span>
@@ -163,7 +164,7 @@
     </div>
 
     <div class="skill-category">
-      <h3>Cloud &amp; Infrastructure</h3>
+      <h3 data-i18n="skills.cat_cloud">Cloud &amp; Infrastructure</h3>
       <div class="skill-items">
         <span class="skill-item primary">Azure (ADF, Synapse, AKS)</span>
         <span class="skill-item">AWS (S3, Lambda)</span>
@@ -174,7 +175,7 @@
     </div>
 
     <div class="skill-category">
-      <h3>Data Visualization</h3>
+      <h3 data-i18n="skills.cat_viz">Data Visualization</h3>
       <div class="skill-items">
         <span class="skill-item primary">Plotly Dash</span>
         <span class="skill-item">Grafana</span>
@@ -184,7 +185,7 @@
     </div>
 
     <div class="skill-category">
-      <h3>Integration &amp; APIs</h3>
+      <h3 data-i18n="skills.cat_int">Integration &amp; APIs</h3>
       <div class="skill-items">
         <span class="skill-item primary">REST APIs</span>
         <span class="skill-item">GraphQL</span>
@@ -195,7 +196,7 @@
     </div>
 
     <div class="skill-category">
-      <h3>DevOps &amp; Quality</h3>
+      <h3 data-i18n="skills.cat_devops">DevOps &amp; Quality</h3>
       <div class="skill-items">
         <span class="skill-item primary">Git / GitHub</span>
         <span class="skill-item">GitHub Actions (CI/CD)</span>
@@ -209,21 +210,21 @@
 
 <!-- ===== EXPERIENCE ===== -->
 <section id="experience">
-  <p class="section-label">Experience</p>
-  <h2 class="section-title">Career Timeline</h2>
-  <p class="section-subtitle">Building industrial intelligence through data engineering and predictive analytics.</p>
+  <p class="section-label" data-i18n="exp.label">Experience</p>
+  <h2 class="section-title" data-i18n="exp.title">Career Timeline</h2>
+  <p class="section-subtitle" data-i18n="exp.subtitle">Building industrial intelligence through data engineering and predictive analytics.</p>
 
   <div class="timeline">
     <div class="timeline-item">
-      <div class="timeline-date">April 2022 — Present</div>
-      <div class="timeline-role">Application &amp; Quality Engineer — Industrial AI / Data Analytics</div>
-      <div class="timeline-company">Hitachi High-Technologies Corporation · Tokyo, Japan</div>
+      <div class="timeline-date" data-i18n="exp.date">April 2022 — Present</div>
+      <div class="timeline-role" data-i18n="exp.role">Application &amp; Quality Engineer — Industrial AI / Data Analytics</div>
+      <div class="timeline-company" data-i18n="exp.company">Hitachi High-Technologies Corporation · Tokyo, Japan</div>
       <ul class="timeline-desc">
-        <li>Contributed to fleet-scale AI predictive maintenance development for globally deployed precision instruments, partnering with an international R&amp;D collaborator on data-sharing governance, schema definition, and feature design — translating equipment domain knowledge into ML inputs and supporting product-grade deployment of the resulting models.</li>
-        <li>Owned operational telemetry analytics on a globally deployed product fleet, combining statistical analysis (FTA, fishbone, multivariate inspection of ~50 quality channels) with on-site root-cause investigation; drove an order-of-magnitude reduction in out-of-spec rate on a key process metric.</li>
-        <li>Co-developed an automation robotics initiative for clinical-workflow tasks: facilitated cross-functional design reviews, designed and analysed a quantitative product-evaluation survey, and was named co-inventor on a filed patent on human–robot collaboration.</li>
-        <li>Led design verification across multiple parallel themes in coordination with international R&amp;D peers in Europe, running technical reviews in English; contributed data, calculation tooling, and regulatory documentation to a manufacturing-transfer programme that launched ahead of schedule.</li>
-        <li>Continuously deepen ML / AI skills outside core work — Kaggle competitions, completion of a graduate-school medical-AI programme, G-Test (JDLA Generalist) certification, and active engagement with academic conferences on medical AI and computer vision.</li>
+        <li data-i18n="exp.b1">Contributed to fleet-scale AI predictive maintenance development for globally deployed precision instruments, partnering with an international R&amp;D collaborator on data-sharing governance, schema definition, and feature design — translating equipment domain knowledge into ML inputs and supporting product-grade deployment of the resulting models.</li>
+        <li data-i18n="exp.b2">Owned operational telemetry analytics on a globally deployed product fleet, combining statistical analysis (FTA, fishbone, multivariate inspection of ~50 quality channels) with on-site root-cause investigation; drove an order-of-magnitude reduction in out-of-spec rate on a key process metric.</li>
+        <li data-i18n="exp.b3">Co-developed an automation robotics initiative for clinical-workflow tasks: facilitated cross-functional design reviews, designed and analysed a quantitative product-evaluation survey, and was named co-inventor on a filed patent on human–robot collaboration.</li>
+        <li data-i18n="exp.b4">Led design verification across multiple parallel themes in coordination with international R&amp;D peers in Europe, running technical reviews in English; contributed data, calculation tooling, and regulatory documentation to a manufacturing-transfer programme that launched ahead of schedule.</li>
+        <li data-i18n="exp.b5">Continuously deepen ML / AI skills outside core work — Kaggle competitions, completion of a graduate-school medical-AI programme, G-Test (JDLA Generalist) certification, and active engagement with academic conferences on medical AI and computer vision.</li>
       </ul>
     </div>
   </div>
@@ -231,25 +232,25 @@
 
 <!-- ===== DEMO PROJECT ===== -->
 <section id="demo">
-  <p class="section-label">Featured Project</p>
-  <h2 class="section-title">Predictive Maintenance on NASA CMAPSS</h2>
+  <p class="section-label" data-i18n="demo.label">Featured Project</p>
+  <h2 class="section-title" data-i18n="demo.title">Predictive Maintenance on NASA CMAPSS</h2>
 
   <!-- Real implementation callout -->
   <div class="repo-callout">
     <div class="repo-callout-text">
-      <p class="section-label" style="margin-bottom:0.5rem;">Open-source implementation</p>
-      <h3 style="font-size:1.4rem;margin-bottom:0.5rem;color:var(--text-primary);">predictive-maintenance-cmapss</h3>
-      <p style="margin-bottom:1rem;">
+      <p class="section-label" style="margin-bottom:0.5rem;" data-i18n="demo.repo_label">Open-source implementation</p>
+      <h3 style="font-size:1.4rem;margin-bottom:0.5rem;color:var(--text-primary);" data-i18n="demo.repo_h">predictive-maintenance-cmapss</h3>
+      <p style="margin-bottom:1rem;" data-i18n="demo.repo_p">
         An end-to-end Python pipeline on NASA's CMAPSS turbofan degradation dataset —
         strict-schema data loader, feature engineering, baseline and
         gradient-boosted RUL regressors, with executed Jupyter notebooks
         showing every result.
       </p>
       <div class="repo-stats">
-        <div class="repo-stat"><span class="repo-stat-num">96%</span><span class="repo-stat-label">test coverage</span></div>
-        <div class="repo-stat"><span class="repo-stat-num">59</span><span class="repo-stat-label">tests passing</span></div>
-        <div class="repo-stat"><span class="repo-stat-num">3.11–3.13</span><span class="repo-stat-label">Python matrix CI</span></div>
-        <div class="repo-stat"><span class="repo-stat-num">MIT</span><span class="repo-stat-label">licensed</span></div>
+        <div class="repo-stat"><span class="repo-stat-num">96%</span><span class="repo-stat-label" data-i18n="demo.stat_cov">test coverage</span></div>
+        <div class="repo-stat"><span class="repo-stat-num">59</span><span class="repo-stat-label" data-i18n="demo.stat_tests">tests passing</span></div>
+        <div class="repo-stat"><span class="repo-stat-num">3.11–3.13</span><span class="repo-stat-label" data-i18n="demo.stat_py">Python matrix CI</span></div>
+        <div class="repo-stat"><span class="repo-stat-num">MIT</span><span class="repo-stat-label" data-i18n="demo.stat_lic">licensed</span></div>
       </div>
       <div class="demo-stack" style="margin-top:1.25rem;">
         <span class="tag">Python</span>
@@ -264,19 +265,19 @@
       </div>
     </div>
     <div class="repo-callout-actions">
-      <a href="https://github.com/eastani/predictive-maintenance-cmapss" target="_blank" class="btn btn-primary" style="justify-content:center;">
+      <a href="https://github.com/eastani/predictive-maintenance-cmapss" target="_blank" class="btn btn-primary" style="justify-content:center;" data-i18n="demo.cta_github">
         &#128187; View on GitHub
       </a>
-      <a href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/README.md" target="_blank" class="btn btn-secondary" style="justify-content:center;">
+      <a href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/README.md" target="_blank" class="btn btn-secondary" style="justify-content:center;" data-i18n="demo.cta_readme">
         &#128214; Read the README
       </a>
     </div>
   </div>
 
   <!-- Real notebook results -->
-  <p class="section-label" style="margin-top:3rem;">Results from the executed notebooks</p>
-  <h3 style="font-size:1.3rem;margin-bottom:0.5rem;">Real benchmarks on FD001</h3>
-  <p style="margin-bottom:2rem;color:var(--text-muted);max-width:680px;">
+  <p class="section-label" style="margin-top:3rem;" data-i18n="demo.results_label">Results from the executed notebooks</p>
+  <h3 style="font-size:1.3rem;margin-bottom:0.5rem;" data-i18n="demo.results_h">Real benchmarks on FD001</h3>
+  <p style="margin-bottom:2rem;color:var(--text-muted);max-width:680px;" data-i18n="demo.results_p">
     Every figure below is rendered straight from the executed notebook in the repository — click any
     card to open the full notebook on GitHub.
   </p>
@@ -285,57 +286,57 @@
     <a class="showcase-card" href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/notebooks/01_eda.ipynb" target="_blank">
       <img src="assets/img/eda_failure_alignment.png" alt="Sensor 11 aligned to failure across 25 training units" loading="lazy">
       <div class="showcase-body">
-        <h4>EDA — trajectories aligned to failure</h4>
-        <p>25 training units, sensor 11 plotted vs. cycles before failure. Clean monotonic drift in the last ~80 cycles motivates the piecewise-linear RUL relabelling.</p>
+        <h4 data-i18n="demo.c1_h">EDA — trajectories aligned to failure</h4>
+        <p data-i18n="demo.c1_p">25 training units, sensor 11 plotted vs. cycles before failure. Clean monotonic drift in the last ~80 cycles motivates the piecewise-linear RUL relabelling.</p>
       </div>
     </a>
 
     <a class="showcase-card" href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/notebooks/01_eda.ipynb" target="_blank">
       <img src="assets/img/eda_rul_clipping.png" alt="RUL distribution before and after piecewise-linear clipping at 125 cycles" loading="lazy">
       <div class="showcase-body">
-        <h4>RUL distribution — raw vs. clipped</h4>
-        <p>Capping the regression target at 125 cycles concentrates model capacity on the regime where degradation is observable. Heimes (2008) convention.</p>
+        <h4 data-i18n="demo.c2_h">RUL distribution — raw vs. clipped</h4>
+        <p data-i18n="demo.c2_p">Capping the regression target at 125 cycles concentrates model capacity on the regime where degradation is observable. Heimes (2008) convention.</p>
       </div>
     </a>
 
     <a class="showcase-card" href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/notebooks/02_baseline_rul.ipynb" target="_blank">
       <img src="assets/img/baseline_pred_vs_true.png" alt="Ridge baseline predictions vs true RUL on FD001 test set" loading="lazy">
       <div class="showcase-body">
-        <h4>Ridge baseline — RMSE 18.27 / S-score 592.6</h4>
-        <p>Standard-scaled L2 regression on rolling features. Sets the floor that any non-linear model must clearly beat to justify its complexity.</p>
+        <h4 data-i18n="demo.c3_h">Ridge baseline — RMSE 18.27 / S-score 592.6</h4>
+        <p data-i18n="demo.c3_p">Standard-scaled L2 regression on rolling features. Sets the floor that any non-linear model must clearly beat to justify its complexity.</p>
       </div>
     </a>
 
     <a class="showcase-card" href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/notebooks/03_xgboost_rul.ipynb" target="_blank">
       <img src="assets/img/xgboost_comparison.png" alt="Ridge baseline vs XGBoost predictions side by side" loading="lazy">
       <div class="showcase-body">
-        <h4>XGBoost head-to-head — RMSE 18.23 / S-score 814.8</h4>
-        <p>Tuned XGBoost edges out Ridge on RMSE but loses on the asymmetric S-score. The honest result: FD001's single regime is exactly where linear features compete with trees.</p>
+        <h4 data-i18n="demo.c4_h">XGBoost head-to-head — RMSE 18.23 / S-score 814.8</h4>
+        <p data-i18n="demo.c4_p">Tuned XGBoost edges out Ridge on RMSE but loses on the asymmetric S-score. The honest result: FD001's single regime is exactly where linear features compete with trees.</p>
       </div>
     </a>
 
     <a class="showcase-card" href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/notebooks/03_xgboost_rul.ipynb" target="_blank">
       <img src="assets/img/xgboost_feature_importance.png" alt="Top 15 XGBoost features by gain" loading="lazy">
       <div class="showcase-body">
-        <h4>Feature importance corroborates the EDA</h4>
-        <p>Rolling statistics on high-pressure-compressor sensors dominate — exactly the channels whose drift was visible in the EDA notebook.</p>
+        <h4 data-i18n="demo.c5_h">Feature importance corroborates the EDA</h4>
+        <p data-i18n="demo.c5_p">Rolling statistics on high-pressure-compressor sensors dominate — exactly the channels whose drift was visible in the EDA notebook.</p>
       </div>
     </a>
 
     <a class="showcase-card showcase-card--ghost" href="https://github.com/eastani/predictive-maintenance-cmapss" target="_blank">
       <div class="showcase-body" style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;height:100%;">
-        <p class="section-label" style="margin-bottom:0.5rem;">Coming next</p>
-        <h4 style="margin-bottom:0.5rem;">FD002 / FD004 multi-regime evaluation</h4>
-        <p style="margin-bottom:0.75rem;">Operating-regime clustering, regime-aware normalisation, and an LSTM sequence model over full trajectories — the setting where XGBoost is expected to clearly win.</p>
-        <span style="color:var(--accent);font-size:0.85rem;font-weight:600;">Track progress on GitHub →</span>
+        <p class="section-label" style="margin-bottom:0.5rem;" data-i18n="demo.c6_label">Coming next</p>
+        <h4 style="margin-bottom:0.5rem;" data-i18n="demo.c6_h">FD002 / FD004 multi-regime evaluation</h4>
+        <p style="margin-bottom:0.75rem;" data-i18n="demo.c6_p">Operating-regime clustering, regime-aware normalisation, and an LSTM sequence model over full trajectories — the setting where XGBoost is expected to clearly win.</p>
+        <span style="color:var(--accent);font-size:0.85rem;font-weight:600;" data-i18n="demo.c6_link">Track progress on GitHub →</span>
       </div>
     </a>
   </div>
 
   <!-- Interactive concept preview -->
-  <p class="section-label" style="margin-top:4rem;">Interactive concept preview</p>
-  <h3 style="font-size:1.3rem;margin-bottom:0.5rem;">Synthetic dashboard — live in your browser</h3>
-  <p style="margin-bottom:2rem;color:var(--text-muted);max-width:680px;">
+  <p class="section-label" style="margin-top:4rem;" data-i18n="demo.preview_label">Interactive concept preview</p>
+  <h3 style="font-size:1.3rem;margin-bottom:0.5rem;" data-i18n="demo.preview_h">Synthetic dashboard — live in your browser</h3>
+  <p style="margin-bottom:2rem;color:var(--text-muted);max-width:680px;" data-i18n="demo.preview_p">
     A self-contained Plotly visualisation of what the same pipeline looks like running against
     real-time sensor streams. The data is synthetic so the page stays static — for the actual
     benchmark numbers, see the cards above.
@@ -343,42 +344,42 @@
 
   <div class="chart-grid">
     <div class="chart-card wide">
-      <h3>Multi-Sensor Time Series — Degradation Monitoring</h3>
+      <h3 data-i18n="demo.chart_sensors">Multi-Sensor Time Series — Degradation Monitoring</h3>
       <div id="chart-sensors" style="height:300px;"></div>
     </div>
 
     <div class="chart-card">
-      <h3>RUL Prediction — Actual vs. Predicted</h3>
+      <h3 data-i18n="demo.chart_rul">RUL Prediction — Actual vs. Predicted</h3>
       <div id="chart-rul" style="height:260px;"></div>
     </div>
 
     <div class="chart-card">
-      <h3>Anomaly Detection — Operating State Classification</h3>
+      <h3 data-i18n="demo.chart_anomaly">Anomaly Detection — Operating State Classification</h3>
       <div id="chart-anomaly" style="height:260px;"></div>
     </div>
 
     <div class="chart-card wide" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:center;">
       <div>
-        <h3 style="margin-bottom:0.75rem;">Equipment Health Score (Current)</h3>
+        <h3 style="margin-bottom:0.75rem;" data-i18n="demo.chart_gauge">Equipment Health Score (Current)</h3>
         <div id="chart-gauge" style="height:260px;"></div>
       </div>
       <div>
-        <p class="section-label" style="margin-bottom:0.5rem;">Concept summary</p>
+        <p class="section-label" style="margin-bottom:0.5rem;" data-i18n="demo.summary_label">Concept summary</p>
         <table style="width:100%;font-size:0.82rem;border-collapse:collapse;">
           <tr style="border-bottom:1px solid var(--border);">
-            <td style="padding:0.5rem 0;color:var(--text-muted);">Sensors</td>
-            <td style="padding:0.5rem 0;color:var(--text-primary);">Vibration, Temperature, Pressure</td>
+            <td style="padding:0.5rem 0;color:var(--text-muted);" data-i18n="demo.summary_k1">Sensors</td>
+            <td style="padding:0.5rem 0;color:var(--text-primary);" data-i18n="demo.summary_v1">Vibration, Temperature, Pressure</td>
           </tr>
           <tr style="border-bottom:1px solid var(--border);">
-            <td style="padding:0.5rem 0;color:var(--text-muted);">Cycles</td>
-            <td style="padding:0.5rem 0;color:var(--text-primary);">300 operating cycles</td>
+            <td style="padding:0.5rem 0;color:var(--text-muted);" data-i18n="demo.summary_k2">Cycles</td>
+            <td style="padding:0.5rem 0;color:var(--text-primary);" data-i18n="demo.summary_v2">300 operating cycles</td>
           </tr>
           <tr style="border-bottom:1px solid var(--border);">
-            <td style="padding:0.5rem 0;color:var(--text-muted);">Alert threshold</td>
-            <td style="padding:0.5rem 0;color:#ff4444;font-weight:600;">Health score &lt; 30%</td>
+            <td style="padding:0.5rem 0;color:var(--text-muted);" data-i18n="demo.summary_k3">Alert threshold</td>
+            <td style="padding:0.5rem 0;color:#ff4444;font-weight:600;" data-i18n="demo.summary_v3">Health score &lt; 30%</td>
           </tr>
           <tr>
-            <td style="padding:0.5rem 0;color:var(--text-muted);">Implementation</td>
+            <td style="padding:0.5rem 0;color:var(--text-muted);" data-i18n="demo.summary_k4">Implementation</td>
             <td style="padding:0.5rem 0;color:var(--accent);font-weight:600;"><a href="https://github.com/eastani/predictive-maintenance-cmapss" target="_blank" style="color:inherit;">eastani/predictive-maintenance-cmapss ↗</a></td>
           </tr>
         </table>
@@ -389,114 +390,114 @@
 
 <!-- ===== ARCHITECTURE ===== -->
 <section id="architecture">
-  <p class="section-label">Architecture</p>
-  <h2 class="section-title">Data Pipeline Design</h2>
-  <p class="section-subtitle">End-to-end industrial data flow aligned with Cognite Data Fusion's integration model.</p>
+  <p class="section-label" data-i18n="arch.label">Architecture</p>
+  <h2 class="section-title" data-i18n="arch.title">Data Pipeline Design</h2>
+  <p class="section-subtitle" data-i18n="arch.subtitle">End-to-end industrial data flow aligned with Cognite Data Fusion's integration model.</p>
 
   <div class="arch-diagram">
     <!-- Row 1: Ingestion -->
-    <div class="arch-label">01 — Data Sources & Ingestion</div>
+    <div class="arch-label" data-i18n="arch.row1">01 — Data Sources & Ingestion</div>
     <div class="arch-row">
       <div class="arch-stage">
         <div class="stage-icon">&#9881;</div>
-        <div class="stage-name">Equipment</div>
-        <div class="stage-tech">Sensors / PLC / DCS</div>
+        <div class="stage-name" data-i18n="arch.s_equipment">Equipment</div>
+        <div class="stage-tech" data-i18n="arch.s_equipment_t">Sensors / PLC / DCS</div>
       </div>
       <div class="arch-arrow">&#8594;</div>
       <div class="arch-stage">
         <div class="stage-icon">&#128246;</div>
-        <div class="stage-name">OPC-UA / MQTT</div>
-        <div class="stage-tech">Edge Protocol</div>
+        <div class="stage-name" data-i18n="arch.s_protocol">OPC-UA / MQTT</div>
+        <div class="stage-tech" data-i18n="arch.s_protocol_t">Edge Protocol</div>
       </div>
       <div class="arch-arrow">&#8594;</div>
       <div class="arch-stage">
         <div class="stage-icon">&#9728;</div>
-        <div class="stage-name">Custom Extractor</div>
-        <div class="stage-tech">Python + Docker</div>
+        <div class="stage-name" data-i18n="arch.s_extractor">Custom Extractor</div>
+        <div class="stage-tech" data-i18n="arch.s_extractor_t">Python + Docker</div>
       </div>
       <div class="arch-arrow">&#8594;</div>
       <div class="arch-stage">
         <div class="stage-icon">&#128202;</div>
-        <div class="stage-name">Kafka / REST</div>
-        <div class="stage-tech">Event Streaming</div>
+        <div class="stage-name" data-i18n="arch.s_stream">Kafka / REST</div>
+        <div class="stage-tech" data-i18n="arch.s_stream_t">Event Streaming</div>
       </div>
     </div>
 
     <!-- Row 2: Processing -->
-    <div class="arch-label" style="margin-top:1rem;">02 — Processing & Contextualization</div>
+    <div class="arch-label" style="margin-top:1rem;" data-i18n="arch.row2">02 — Processing & Contextualization</div>
     <div class="arch-row">
       <div class="arch-stage">
         <div class="stage-icon">&#9889;</div>
-        <div class="stage-name">Data Lake</div>
-        <div class="stage-tech">Azure ADLS Gen2</div>
+        <div class="stage-name" data-i18n="arch.s_lake">Data Lake</div>
+        <div class="stage-tech" data-i18n="arch.s_lake_t">Azure ADLS Gen2</div>
       </div>
       <div class="arch-arrow">&#8594;</div>
       <div class="arch-stage">
         <div class="stage-icon">&#128296;</div>
-        <div class="stage-name">Transformation</div>
-        <div class="stage-tech">Spark / Databricks</div>
+        <div class="stage-name" data-i18n="arch.s_transform">Transformation</div>
+        <div class="stage-tech" data-i18n="arch.s_transform_t">Spark / Databricks</div>
       </div>
       <div class="arch-arrow">&#8594;</div>
       <div class="arch-stage">
         <div class="stage-icon">&#128203;</div>
-        <div class="stage-name">Data Modeling</div>
-        <div class="stage-tech">Graph + Relational</div>
+        <div class="stage-name" data-i18n="arch.s_modeling">Data Modeling</div>
+        <div class="stage-tech" data-i18n="arch.s_modeling_t">Graph + Relational</div>
       </div>
       <div class="arch-arrow">&#8594;</div>
       <div class="arch-stage">
         <div class="stage-icon">&#127760;</div>
-        <div class="stage-name">CDF / Data Fusion</div>
-        <div class="stage-tech">Contextualized Assets</div>
+        <div class="stage-name" data-i18n="arch.s_cdf">CDF / Data Fusion</div>
+        <div class="stage-tech" data-i18n="arch.s_cdf_t">Contextualized Assets</div>
       </div>
     </div>
 
     <!-- Row 3: Intelligence -->
-    <div class="arch-label" style="margin-top:1rem;">03 — AI / Intelligence Layer</div>
+    <div class="arch-label" style="margin-top:1rem;" data-i18n="arch.row3">03 — AI / Intelligence Layer</div>
     <div class="arch-row">
       <div class="arch-stage">
         <div class="stage-icon">&#129504;</div>
-        <div class="stage-name">ML Models</div>
-        <div class="stage-tech">RUL / Anomaly Detection</div>
+        <div class="stage-name" data-i18n="arch.s_ml">ML Models</div>
+        <div class="stage-tech" data-i18n="arch.s_ml_t">RUL / Anomaly Detection</div>
       </div>
       <div class="arch-arrow">&#8594;</div>
       <div class="arch-stage">
         <div class="stage-icon">&#129302;</div>
-        <div class="stage-name">AI Agent</div>
-        <div class="stage-tech">GenAI + LLM</div>
+        <div class="stage-name" data-i18n="arch.s_agent">AI Agent</div>
+        <div class="stage-tech" data-i18n="arch.s_agent_t">GenAI + LLM</div>
       </div>
       <div class="arch-arrow">&#8594;</div>
       <div class="arch-stage">
         <div class="stage-icon">&#128204;</div>
-        <div class="stage-name">Alert Engine</div>
-        <div class="stage-tech">Threshold + Rule-based</div>
+        <div class="stage-name" data-i18n="arch.s_alert">Alert Engine</div>
+        <div class="stage-tech" data-i18n="arch.s_alert_t">Threshold + Rule-based</div>
       </div>
       <div class="arch-arrow">&#8594;</div>
       <div class="arch-stage">
         <div class="stage-icon">&#128205;</div>
-        <div class="stage-name">Dashboard</div>
-        <div class="stage-tech">Plotly Dash / Grafana</div>
+        <div class="stage-name" data-i18n="arch.s_dashboard">Dashboard</div>
+        <div class="stage-tech" data-i18n="arch.s_dashboard_t">Plotly Dash / Grafana</div>
       </div>
     </div>
 
     <!-- Row 4: DevOps -->
-    <div class="arch-label" style="margin-top:1rem;">04 — CI/CD &amp; Operations</div>
+    <div class="arch-label" style="margin-top:1rem;" data-i18n="arch.row4">04 — CI/CD &amp; Operations</div>
     <div class="arch-row" style="flex-wrap:wrap;">
       <div class="arch-stage" style="flex:none;min-width:140px;">
         <div class="stage-icon">&#128260;</div>
-        <div class="stage-name">GitHub Actions</div>
-        <div class="stage-tech">CI/CD Pipeline</div>
+        <div class="stage-name" data-i18n="arch.s_ci">GitHub Actions</div>
+        <div class="stage-tech" data-i18n="arch.s_ci_t">CI/CD Pipeline</div>
       </div>
       <div class="arch-arrow">&#8594;</div>
       <div class="arch-stage" style="flex:none;min-width:140px;">
         <div class="stage-icon">&#128225;</div>
-        <div class="stage-name">Container Registry</div>
-        <div class="stage-tech">Azure ACR / Docker</div>
+        <div class="stage-name" data-i18n="arch.s_registry">Container Registry</div>
+        <div class="stage-tech" data-i18n="arch.s_registry_t">Azure ACR / Docker</div>
       </div>
       <div class="arch-arrow">&#8594;</div>
       <div class="arch-stage" style="flex:none;min-width:140px;">
         <div class="stage-icon">&#128064;</div>
-        <div class="stage-name">Monitoring</div>
-        <div class="stage-tech">Azure Monitor / Grafana</div>
+        <div class="stage-name" data-i18n="arch.s_monitor">Monitoring</div>
+        <div class="stage-tech" data-i18n="arch.s_monitor_t">Azure Monitor / Grafana</div>
       </div>
     </div>
   </div>
@@ -504,10 +505,10 @@
 
 <!-- ===== CONTACT ===== -->
 <section id="contact">
-  <p class="section-label">Contact</p>
+  <p class="section-label" data-i18n="contact.label">Contact</p>
   <div class="contact-card">
-    <h2>Let's Build Something<br/><span class="accent">Industrial &amp; Intelligent</span></h2>
-    <p style="margin-top:1rem;">
+    <h2 data-i18n="contact.title">Let's Build Something<br/><span class="accent">Industrial &amp; Intelligent</span></h2>
+    <p style="margin-top:1rem;" data-i18n="contact.desc">
       Open to Data Engineer / Data Scientist opportunities in industrial AI and
       IIoT platforms. Let's connect.
     </p>
@@ -528,10 +529,11 @@
 
 <!-- ===== FOOTER ===== -->
 <footer>
-  <p>&copy; 2026 Naoya Higashitani &nbsp;&#183;&nbsp; Data Engineer &nbsp;&#183;&nbsp; Industrial AI</p>
+  <p data-i18n="footer.text">&copy; 2026 Naoya Higashitani &nbsp;&#183;&nbsp; Data Engineer &nbsp;&#183;&nbsp; Industrial AI</p>
 </footer>
 
-<!-- Charts -->
+<!-- Charts & i18n -->
+<script src="assets/js/translations.js"></script>
 <script src="assets/js/charts.js"></script>
 
 </body>
