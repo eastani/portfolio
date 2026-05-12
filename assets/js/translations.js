@@ -9,10 +9,12 @@ const I18N = {
     'meta.title': 'Naoya Higashitani | Data Engineer',
 
     // ---- Nav ----
+    'nav.impact':       'Impact',
     'nav.about':        'About',
     'nav.skills':       'Skills',
     'nav.experience':   'Experience',
     'nav.demo':         'Demo',
+    'nav.process':      'Process',
     'nav.architecture': 'Architecture',
     'nav.contact':      'Contact',
     'nav.toggle':       '日本語',
@@ -36,6 +38,26 @@ const I18N = {
     'hero.proof_coverage': 'test coverage',
     'hero.proof_tests':    'tests passing',
     'hero.proof_cert':     'G-Test certified',
+
+    // ---- Impact ----
+    'impact.label':      'Impact Snapshot',
+    'impact.title':      'Industrial AI that survives contact with the field',
+    'impact.subtitle':   'The common thread across my work is turning messy operational data into systems engineers can trust, maintain, and improve.',
+    'impact.card1_k':    'Reliability',
+    'impact.card1_h':    'Move from dashboards to decisions',
+    'impact.card1_p':    'I design analytics that connect model outputs to field actions: what changed, why it matters, and what a service or quality team should do next.',
+    'impact.card2_k':    'Data Product',
+    'impact.card2_h':    'Make industrial data usable',
+    'impact.card2_p':    'I translate equipment behavior into schemas, features, validation rules, and notebooks that data scientists and domain engineers can both reason about.',
+    'impact.card3_k':    'Execution',
+    'impact.card3_h':    'Bridge R&amp;D, field, and delivery',
+    'impact.card3_p':    'I work across Japanese and English technical teams, keeping requirements, data definitions, experiments, and deployment constraints aligned.',
+    'impact.signal1_h':  'Best fit',
+    'impact.signal1_p':  'Industrial AI, IIoT platforms, predictive maintenance, quality analytics',
+    'impact.signal2_h':  'Strength',
+    'impact.signal2_p':  'Domain-grounded data engineering from raw telemetry to model-ready features',
+    'impact.signal3_h':  'Working style',
+    'impact.signal3_p':  'Hands-on builder, careful communicator, production-minded collaborator',
 
     // ---- About ----
     'about.label':       'About Me',
@@ -129,6 +151,19 @@ const I18N = {
     'demo.summary_v3':    'Health score &lt; 30%',
     'demo.summary_k4':    'Implementation',
 
+    // ---- Process ----
+    'process.label':    'How I Work',
+    'process.title':    'From equipment signals to operational AI',
+    'process.subtitle': 'A practical workflow for industrial data projects where model quality, domain validity, and deployment constraints all matter.',
+    'process.s1_h':     'Frame the operating problem',
+    'process.s1_p':     'Start from failure modes, maintenance workflows, and business impact before touching the model. The target is a decision, not a chart.',
+    'process.s2_h':     'Build trustworthy data contracts',
+    'process.s2_p':     'Define schemas, sensor semantics, validation checks, and reproducible datasets so experiments are explainable and repeatable.',
+    'process.s3_h':     'Validate against reality',
+    'process.s3_p':     'Compare simple baselines, inspect feature behavior, and test whether the result matches equipment physics and field intuition.',
+    'process.s4_h':     'Package for adoption',
+    'process.s4_p':     'Turn notebooks into tested pipelines, dashboards, alerts, and documentation that service, quality, and R&amp;D teams can actually use.',
+
     // ---- Architecture ----
     'arch.label':    'Architecture',
     'arch.title':    'Data Pipeline Design',
@@ -172,6 +207,12 @@ const I18N = {
     'contact.label': 'Contact',
     'contact.title': "Let&apos;s build something<br/><span class=\"accent\">industrial and intelligent</span>",
     'contact.desc':  'Open to Data Engineer and Data Scientist roles working on industrial AI and IIoT platforms. Casual chats are welcome — feel free to reach out.',
+    'contact.fit1_k': 'Target roles',
+    'contact.fit1_v': 'Data Engineer / Data Scientist / Industrial AI Engineer',
+    'contact.fit2_k': 'Location',
+    'contact.fit2_v': 'Tokyo / remote-friendly global teams',
+    'contact.fit3_k': 'Languages',
+    'contact.fit3_v': 'Japanese / English technical communication',
 
     // ---- Footer ----
     'footer.text': '© 2026 Naoya Higashitani &nbsp;&middot;&nbsp; Data Engineer &nbsp;&middot;&nbsp; Industrial AI',
@@ -182,10 +223,12 @@ const I18N = {
     'meta.title': '東谷直哉 | データエンジニア',
 
     // ---- Nav ----
+    'nav.impact':       '価値',
     'nav.about':        '自己紹介',
     'nav.skills':       'スキル',
     'nav.experience':   '経歴',
     'nav.demo':         'デモ',
+    'nav.process':      '進め方',
     'nav.architecture': 'アーキテクチャ',
     'nav.contact':      'お問い合わせ',
     'nav.toggle':       'EN',
@@ -209,6 +252,26 @@ const I18N = {
     'hero.proof_coverage': 'テストカバレッジ',
     'hero.proof_tests':    'テスト全通過',
     'hero.proof_cert':     'G検定取得',
+
+    // ---- Impact ----
+    'impact.label':      '提供価値',
+    'impact.title':      '現場で使える産業AIをつくる',
+    'impact.subtitle':   '私の仕事の軸は、扱いづらい運用データを、エンジニアが信頼し、保守し、改善できる仕組みに変えることです。',
+    'impact.card1_k':    '信頼性',
+    'impact.card1_h':    'ダッシュボードから意思決定へ',
+    'impact.card1_p':    'モデルの出力を現場の行動につなげます。何が変わったのか、なぜ重要なのか、サービス・品質チームが次に何をすべきかまで設計します。',
+    'impact.card2_k':    'データプロダクト',
+    'impact.card2_h':    '産業データを使える形にする',
+    'impact.card2_p':    '装置の挙動を、スキーマ、特徴量、検証ルール、再現可能なノートブックに落とし込み、データサイエンス側とドメイン側の双方が議論できる状態にします。',
+    'impact.card3_k':    '推進力',
+    'impact.card3_h':    'R&amp;D・現場・デリバリーをつなぐ',
+    'impact.card3_p':    '日本語・英語の技術チームをまたいで、要求、データ定義、実験、導入制約の認識を揃えながら前に進めます。',
+    'impact.signal1_h':  '得意領域',
+    'impact.signal1_p':  '産業AI、IIoTプラットフォーム、予知保全、品質データ分析',
+    'impact.signal2_h':  '強み',
+    'impact.signal2_p':  '生の運用データからモデル入力までをつなぐ、ドメイン起点のデータエンジニアリング',
+    'impact.signal3_h':  '働き方',
+    'impact.signal3_p':  '手を動かす実装力、丁寧な技術コミュニケーション、本番運用を見据えた設計',
 
     // ---- About ----
     'about.label':       '自己紹介',
@@ -302,6 +365,19 @@ const I18N = {
     'demo.summary_v3':    'ヘルススコア &lt; 30%',
     'demo.summary_k4':    '実装',
 
+    // ---- Process ----
+    'process.label':    '進め方',
+    'process.title':    '装置信号から運用されるAIへ',
+    'process.subtitle': 'モデル性能、ドメイン妥当性、導入制約のすべてが重要になる産業データプロジェクトのための実践的な進め方です。',
+    'process.s1_h':     '運用課題を定義する',
+    'process.s1_p':     'モデルからではなく、故障モード、保守フロー、事業インパクトから始めます。目標はグラフではなく、意思決定です。',
+    'process.s2_h':     '信頼できるデータ契約を作る',
+    'process.s2_p':     'スキーマ、センサーの意味、検証チェック、再現可能なデータセットを定義し、説明可能で繰り返せる実験にします。',
+    'process.s3_h':     '現実に照らして検証する',
+    'process.s3_p':     '単純なベースラインと比較し、特徴量の挙動を確認し、結果が装置の物理や現場感覚と矛盾しないかを見ます。',
+    'process.s4_h':     '使われる形にパッケージする',
+    'process.s4_p':     'ノートブックを、テスト済みパイプライン、ダッシュボード、アラート、ドキュメントへ落とし込み、サービス・品質・R&amp;Dチームが使える状態にします。',
+
     // ---- Architecture ----
     'arch.label':    'アーキテクチャ',
     'arch.title':    'データパイプライン設計',
@@ -345,6 +421,12 @@ const I18N = {
     'contact.label': 'お問い合わせ',
     'contact.title': '<span class="accent">産業×インテリジェンス</span>を<br/>一緒に形にしませんか？',
     'contact.desc':  '産業AIやIIoTプラットフォーム領域での、データエンジニア・データサイエンティストの機会に関心があります。カジュアル面談も歓迎ですので、お気軽にご連絡ください。',
+    'contact.fit1_k': '希望職種',
+    'contact.fit1_v': 'データエンジニア / データサイエンティスト / 産業AIエンジニア',
+    'contact.fit2_k': '拠点',
+    'contact.fit2_v': '東京 / リモート前提のグローバルチーム',
+    'contact.fit3_k': '言語',
+    'contact.fit3_v': '日本語 / 英語での技術コミュニケーション',
 
     // ---- Footer ----
     'footer.text': '© 2026 東谷直哉 &nbsp;&middot;&nbsp; データエンジニア &nbsp;&middot;&nbsp; 産業AI',
