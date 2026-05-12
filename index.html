@@ -7,6 +7,9 @@
   <meta name="description" content="Data Engineer specializing in industrial IoT, predictive maintenance, and AI-driven data pipelines." />
   <meta name="theme-color" content="#080d1a" />
   <link rel="canonical" href="https://eastani.github.io/portfolio/" />
+  <link rel="alternate" hreflang="en" href="https://eastani.github.io/portfolio/" />
+  <link rel="alternate" hreflang="ja" href="https://eastani.github.io/portfolio/" />
+  <link rel="alternate" hreflang="x-default" href="https://eastani.github.io/portfolio/" />
 
   <!-- Open Graph (Facebook / LinkedIn) -->
   <meta property="og:type"        content="profile" />
@@ -30,18 +33,46 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Plotly -->
-  <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
-
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Naoya Higashitani",
+    "url": "https://eastani.github.io/portfolio/",
+    "sameAs": [
+      "https://github.com/eastani",
+      "https://www.linkedin.com/in/naoya-higashitani/"
+    ],
+    "jobTitle": "Industrial Data Engineer",
+    "knowsAbout": [
+      "Industrial IoT",
+      "Predictive maintenance",
+      "Data engineering",
+      "Machine learning",
+      "Anomaly detection",
+      "Quality analytics"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Hitachi High-Technologies Corporation"
+    }
+  }
+  </script>
 </head>
 <body>
 
 <!-- ===== NAV ===== -->
 <nav>
   <a href="#hero" class="nav-logo">NH.</a>
-  <ul class="nav-links">
+  <button id="nav-menu-toggle" type="button" class="nav-menu-toggle" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul id="nav-links" class="nav-links">
     <li><a href="#about" data-i18n="nav.about">About</a></li>
     <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
     <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
@@ -57,39 +88,57 @@
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
 
-  <div class="hero-content">
-    <div class="hero-badge" data-i18n="hero.badge">Available for new opportunities</div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge" data-i18n="hero.badge">Available for new opportunities</div>
 
-    <h1 class="hero-title" data-i18n="hero.title">
-      Industrial <span class="highlight">Data Engineer</span><br />
-      & AI Solutions Builder
-    </h1>
+      <h1 class="hero-title" data-i18n="hero.title">
+        Industrial <span class="highlight">Data Engineer</span><br />
+        & AI Solutions Builder
+      </h1>
 
-    <p class="hero-desc" data-i18n="hero.desc">
-      I bridge the gap between raw industrial sensor data and actionable intelligence —
-      designing scalable data pipelines, predictive maintenance models, and AI-powered
-      dashboards for heavy industries.
-    </p>
+      <p class="hero-desc" data-i18n="hero.desc">
+        I bridge the gap between raw industrial sensor data and actionable intelligence —
+        designing scalable data pipelines, predictive maintenance models, and AI-powered
+        dashboards for heavy industries.
+      </p>
 
-    <div class="hero-cta">
-      <a href="#demo" class="btn btn-primary" data-i18n="hero.cta_demo">&#9654; View Live Demo</a>
-      <a href="#contact" class="btn btn-secondary" data-i18n="hero.cta_contact">Get in Touch</a>
+      <div class="hero-cta">
+        <a href="#demo" class="btn btn-primary" data-i18n="hero.cta_demo">&#9654; View Live Demo</a>
+        <a href="https://github.com/eastani/predictive-maintenance-cmapss" target="_blank" rel="noopener" class="btn btn-secondary" data-i18n="hero.cta_project">View GitHub Project</a>
+        <a href="#contact" class="btn btn-secondary" data-i18n="hero.cta_contact">Get in Touch</a>
+      </div>
+
+      <div class="hero-stats">
+        <div>
+          <div class="stat-value" data-i18n="hero.stat1">4+</div>
+          <div class="stat-label" data-i18n="hero.stat1_label">Years in Industrial Data &amp; Quality Engineering</div>
+        </div>
+        <div>
+          <div class="stat-value" data-i18n="hero.stat2">AI</div>
+          <div class="stat-label" data-i18n="hero.stat2_label">Predictive Maintenance &amp; Anomaly Detection</div>
+        </div>
+        <div>
+          <div class="stat-value" data-i18n="hero.stat3">Global</div>
+          <div class="stat-label" data-i18n="hero.stat3_label">Cross-border R&amp;D &amp; Stakeholder Coordination</div>
+        </div>
+      </div>
     </div>
 
-    <div class="hero-stats">
-      <div>
-        <div class="stat-value" data-i18n="hero.stat1">4+</div>
-        <div class="stat-label" data-i18n="hero.stat1_label">Years in Industrial Data &amp; Quality Engineering</div>
+    <aside class="hero-visual" aria-label="Predictive maintenance project preview">
+      <div class="hero-visual-frame">
+        <img src="assets/img/xgboost_comparison.png" alt="Predictive maintenance benchmark comparing Ridge and XGBoost RUL predictions" />
+        <div class="hero-visual-caption">
+          <span data-i18n="hero.visual_label">Live project evidence</span>
+          <strong data-i18n="hero.visual_title">CMAPSS RUL benchmark</strong>
+        </div>
       </div>
-      <div>
-        <div class="stat-value" data-i18n="hero.stat2">AI</div>
-        <div class="stat-label" data-i18n="hero.stat2_label">Predictive Maintenance &amp; Anomaly Detection</div>
+      <div class="proof-strip">
+        <div><strong>96%</strong><span data-i18n="hero.proof_coverage">test coverage</span></div>
+        <div><strong>59</strong><span data-i18n="hero.proof_tests">tests passing</span></div>
+        <div><strong>JDLA</strong><span data-i18n="hero.proof_cert">G-Test certified</span></div>
       </div>
-      <div>
-        <div class="stat-value" data-i18n="hero.stat3">Global</div>
-        <div class="stat-label" data-i18n="hero.stat3_label">Cross-border R&amp;D &amp; Stakeholder Coordination</div>
-      </div>
-    </div>
+    </aside>
   </div>
 </section>
 
@@ -285,10 +334,10 @@
       </div>
     </div>
     <div class="repo-callout-actions">
-      <a href="https://github.com/eastani/predictive-maintenance-cmapss" target="_blank" class="btn btn-primary" style="justify-content:center;" data-i18n="demo.cta_github">
+      <a href="https://github.com/eastani/predictive-maintenance-cmapss" target="_blank" rel="noopener" class="btn btn-primary" style="justify-content:center;" data-i18n="demo.cta_github">
         &#128187; View on GitHub
       </a>
-      <a href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/README.md" target="_blank" class="btn btn-secondary" style="justify-content:center;" data-i18n="demo.cta_readme">
+      <a href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/README.md" target="_blank" rel="noopener" class="btn btn-secondary" style="justify-content:center;" data-i18n="demo.cta_readme">
         &#128214; Read the README
       </a>
     </div>
@@ -303,7 +352,7 @@
   </p>
 
   <div class="showcase-grid">
-    <a class="showcase-card" href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/notebooks/01_eda.ipynb" target="_blank">
+    <a class="showcase-card" href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/notebooks/01_eda.ipynb" target="_blank" rel="noopener">
       <img src="assets/img/eda_failure_alignment.png" alt="Sensor 11 aligned to failure across 25 training units" loading="lazy">
       <div class="showcase-body">
         <h4 data-i18n="demo.c1_h">EDA — trajectories aligned to failure</h4>
@@ -311,7 +360,7 @@
       </div>
     </a>
 
-    <a class="showcase-card" href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/notebooks/01_eda.ipynb" target="_blank">
+    <a class="showcase-card" href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/notebooks/01_eda.ipynb" target="_blank" rel="noopener">
       <img src="assets/img/eda_rul_clipping.png" alt="RUL distribution before and after piecewise-linear clipping at 125 cycles" loading="lazy">
       <div class="showcase-body">
         <h4 data-i18n="demo.c2_h">RUL distribution — raw vs. clipped</h4>
@@ -319,7 +368,7 @@
       </div>
     </a>
 
-    <a class="showcase-card" href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/notebooks/02_baseline_rul.ipynb" target="_blank">
+    <a class="showcase-card" href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/notebooks/02_baseline_rul.ipynb" target="_blank" rel="noopener">
       <img src="assets/img/baseline_pred_vs_true.png" alt="Ridge baseline predictions vs true RUL on FD001 test set" loading="lazy">
       <div class="showcase-body">
         <h4 data-i18n="demo.c3_h">Ridge baseline — RMSE 18.27 / S-score 592.6</h4>
@@ -327,7 +376,7 @@
       </div>
     </a>
 
-    <a class="showcase-card" href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/notebooks/03_xgboost_rul.ipynb" target="_blank">
+    <a class="showcase-card" href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/notebooks/03_xgboost_rul.ipynb" target="_blank" rel="noopener">
       <img src="assets/img/xgboost_comparison.png" alt="Ridge baseline vs XGBoost predictions side by side" loading="lazy">
       <div class="showcase-body">
         <h4 data-i18n="demo.c4_h">XGBoost head-to-head — RMSE 18.23 / S-score 814.8</h4>
@@ -335,7 +384,7 @@
       </div>
     </a>
 
-    <a class="showcase-card" href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/notebooks/03_xgboost_rul.ipynb" target="_blank">
+    <a class="showcase-card" href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/notebooks/03_xgboost_rul.ipynb" target="_blank" rel="noopener">
       <img src="assets/img/xgboost_feature_importance.png" alt="Top 15 XGBoost features by gain" loading="lazy">
       <div class="showcase-body">
         <h4 data-i18n="demo.c5_h">Feature importance corroborates the EDA</h4>
@@ -343,7 +392,7 @@
       </div>
     </a>
 
-    <a class="showcase-card showcase-card--ghost" href="https://github.com/eastani/predictive-maintenance-cmapss" target="_blank">
+    <a class="showcase-card showcase-card--ghost" href="https://github.com/eastani/predictive-maintenance-cmapss" target="_blank" rel="noopener">
       <div class="showcase-body" style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;height:100%;">
         <p class="section-label" style="margin-bottom:0.5rem;" data-i18n="demo.c6_label">Coming next</p>
         <h4 style="margin-bottom:0.5rem;" data-i18n="demo.c6_h">FD002 / FD004 multi-regime evaluation</h4>
@@ -400,7 +449,7 @@
           </tr>
           <tr>
             <td style="padding:0.5rem 0;color:var(--text-muted);" data-i18n="demo.summary_k4">Implementation</td>
-            <td style="padding:0.5rem 0;color:var(--accent);font-weight:600;"><a href="https://github.com/eastani/predictive-maintenance-cmapss" target="_blank" style="color:inherit;">eastani/predictive-maintenance-cmapss ↗</a></td>
+            <td style="padding:0.5rem 0;color:var(--accent);font-weight:600;"><a href="https://github.com/eastani/predictive-maintenance-cmapss" target="_blank" rel="noopener" style="color:inherit;">eastani/predictive-maintenance-cmapss ↗</a></td>
           </tr>
         </table>
       </div>
@@ -534,10 +583,10 @@
     </p>
 
     <div class="contact-links">
-      <a href="https://www.linkedin.com/in/naoya-higashitani/" class="contact-link" target="_blank">
+      <a href="https://www.linkedin.com/in/naoya-higashitani/" class="contact-link" target="_blank" rel="noopener">
         &#128101; LinkedIn
       </a>
-      <a href="https://github.com/eastani" class="contact-link" target="_blank">
+      <a href="https://github.com/eastani" class="contact-link" target="_blank" rel="noopener">
         &#128187; GitHub
       </a>
       <a href="mailto:taquanta777@gmail.com" class="contact-link">
@@ -553,6 +602,7 @@
 </footer>
 
 <!-- Charts & i18n -->
+<script src="assets/js/site.js"></script>
 <script src="assets/js/translations.js"></script>
 <script src="assets/js/charts.js"></script>
 

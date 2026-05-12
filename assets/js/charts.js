@@ -11,6 +11,35 @@ const PLOTLY_DARK = {
 };
 
 const CONFIG = { responsive: true, displayModeBar: false };
+const PLOTLY_SRC = 'https://cdn.plot.ly/plotly-2.32.0.min.js';
+let plotlyReady;
+
+function loadPlotly() {
+  if (window.Plotly) return Promise.resolve(window.Plotly);
+  if (plotlyReady) return plotlyReady;
+
+  plotlyReady = new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = PLOTLY_SRC;
+    script.async = true;
+    script.onload = () => resolve(window.Plotly);
+    script.onerror = () => reject(new Error('Plotly failed to load'));
+    document.head.appendChild(script);
+  });
+
+  return plotlyReady;
+}
+
+function showChartLoading(el) {
+  if (!el || el.dataset.loading) return;
+  el.dataset.loading = '1';
+  el.innerHTML = '<div class="chart-loading">Loading chart...</div>';
+}
+
+function showChartError(el) {
+  if (!el) return;
+  el.innerHTML = '<div class="chart-loading">Chart unavailable. Please refresh the page.</div>';
+}
 
 // ===== DATA GENERATION =====
 function linspace(start, end, n) {
@@ -218,11 +247,17 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(e => {
       if (e.isIntersecting && !e.target.dataset.drawn) {
         e.target.dataset.drawn = '1';
+        showChartLoading(e.target);
         const id = e.target.id;
-        if (id === 'chart-sensors') drawSensorChart();
-        if (id === 'chart-rul')     drawRULChart();
-        if (id === 'chart-anomaly') drawAnomalyChart();
-        if (id === 'chart-gauge')   drawHealthGauge();
+        loadPlotly()
+          .then(() => {
+            e.target.innerHTML = '';
+            if (id === 'chart-sensors') drawSensorChart();
+            if (id === 'chart-rul')     drawRULChart();
+            if (id === 'chart-anomaly') drawAnomalyChart();
+            if (id === 'chart-gauge')   drawHealthGauge();
+          })
+          .catch(() => showChartError(e.target));
       }
     });
   }, { threshold: 0.2 });

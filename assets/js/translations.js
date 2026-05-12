@@ -23,6 +23,7 @@ const I18N = {
     'hero.title':         'Industrial <span class="highlight">Data Engineer</span><br/>&amp; AI Solutions Builder',
     'hero.desc':          'I turn raw industrial sensor data into decisions that hold up on the production floor — building scalable data pipelines, predictive maintenance models, and AI-augmented dashboards for regulated, mission-critical industries.',
     'hero.cta_demo':      '&#9654; See the demo',
+    'hero.cta_project':   'View GitHub project',
     'hero.cta_contact':   'Get in touch',
     'hero.stat1':         '4+',
     'hero.stat1_label':   'years in industrial data &amp; quality engineering',
@@ -30,6 +31,11 @@ const I18N = {
     'hero.stat2_label':   'predictive maintenance &amp; anomaly detection',
     'hero.stat3':         'Global',
     'hero.stat3_label':   'cross-border R&amp;D and stakeholder coordination',
+    'hero.visual_label':  'Live project evidence',
+    'hero.visual_title':  'CMAPSS RUL benchmark',
+    'hero.proof_coverage': 'test coverage',
+    'hero.proof_tests':    'tests passing',
+    'hero.proof_cert':     'G-Test certified',
 
     // ---- About ----
     'about.label':       'About Me',
@@ -190,6 +196,7 @@ const I18N = {
     'hero.title':         '<span class="highlight">産業データエンジニア</span><br/>× AI ソリューション開発',
     'hero.desc':          '産業現場のセンサーデータを、製造ラインで実際に使われる意思決定につなげる。規制やミッションクリティカル性が問われる産業領域を対象に、スケーラブルなデータパイプライン、予知保全モデル、AIを活かしたダッシュボードを設計・実装しています。',
     'hero.cta_demo':      '&#9654; デモを見る',
+    'hero.cta_project':   'GitHubプロジェクトを見る',
     'hero.cta_contact':   'お問い合わせ',
     'hero.stat1':         '4+',
     'hero.stat1_label':   '産業データ・品質エンジニアとしての実務年数',
@@ -197,6 +204,11 @@ const I18N = {
     'hero.stat2_label':   '予知保全と異常検知',
     'hero.stat3':         'Global',
     'hero.stat3_label':   '海外R&amp;Dとの協業と社内外の調整',
+    'hero.visual_label':  '公開プロジェクト実績',
+    'hero.visual_title':  'CMAPSS RULベンチマーク',
+    'hero.proof_coverage': 'テストカバレッジ',
+    'hero.proof_tests':    'テスト全通過',
+    'hero.proof_cert':     'G検定取得',
 
     // ---- About ----
     'about.label':       '自己紹介',
