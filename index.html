@@ -6,7 +6,18 @@
   <title>Naoya Higashitani | Data Engineer</title>
   <meta name="description" content="Data Engineer specializing in industrial IoT, predictive maintenance, and AI-driven data pipelines." />
   <meta name="theme-color" content="#080d1a" />
+  <meta name="author" content="Naoya Higashitani" />
+  <meta name="keywords" content="Naoya Higashitani, 東谷直哉, Industrial Data Engineer, Predictive Maintenance, Industrial IoT, IIoT, Anomaly Detection, Time-Series, Hitachi High-Technologies, 予知保全, 産業AI" />
   <link rel="canonical" href="https://eastani.github.io/portfolio/" />
+
+  <!-- hreflang alternates -->
+  <link rel="alternate" hreflang="en" href="https://eastani.github.io/portfolio/?lang=en" />
+  <link rel="alternate" hreflang="ja" href="https://eastani.github.io/portfolio/?lang=ja" />
+  <link rel="alternate" hreflang="x-default" href="https://eastani.github.io/portfolio/" />
+
+  <!-- Favicons (inline SVG monogram + raster fallback to OG image) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='6'%20fill='%23080d1a'/%3E%3Ctext%20x='16'%20y='22'%20font-family='Inter,sans-serif'%20font-size='15'%20font-weight='800'%20text-anchor='middle'%20fill='%2300c2ff'%3ENH%3C/text%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="assets/img/og-card.png" />
 
   <!-- Open Graph (Facebook / LinkedIn) -->
   <meta property="og:type"        content="profile" />
@@ -26,22 +37,73 @@
   <meta name="twitter:description" content="Predictive maintenance, quality analytics, and AI pipelines for globally deployed precision instruments." />
   <meta name="twitter:image"       content="https://eastani.github.io/portfolio/assets/img/og-card.png" />
 
+  <!-- JSON-LD Person schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Naoya Higashitani",
+    "alternateName": "東谷直哉",
+    "jobTitle": "Industrial Data Engineer",
+    "description": "Industrial Data Engineer × AI Solutions Builder focused on predictive maintenance, IIoT, and ML pipelines for globally deployed precision instruments.",
+    "url": "https://eastani.github.io/portfolio/",
+    "image": "https://eastani.github.io/portfolio/assets/img/og-card.png",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Hitachi High-Technologies Corporation"
+    },
+    "knowsAbout": [
+      "Predictive Maintenance",
+      "Industrial IoT",
+      "Time-Series Analysis",
+      "Anomaly Detection",
+      "Quality Analytics",
+      "Machine Learning",
+      "Data Engineering"
+    ],
+    "sameAs": [
+      "https://github.com/eastani",
+      "https://www.linkedin.com/in/naoya-higashitani/"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tokyo",
+      "addressCountry": "JP"
+    }
+  }
+  </script>
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-
-  <!-- Plotly -->
-  <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
+<!-- Accessibility: skip directly to main content for keyboard / screen-reader users -->
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
+
 <!-- ===== NAV ===== -->
-<nav>
+<nav aria-label="Primary">
   <a href="#hero" class="nav-logo">NH.</a>
-  <ul class="nav-links">
+
+  <button
+    id="nav-toggle"
+    type="button"
+    class="nav-toggle"
+    aria-expanded="false"
+    aria-controls="primary-nav"
+    data-i18n-aria-label="nav.menu.open"
+    aria-label="Open menu">
+    <span class="nav-toggle-bar" aria-hidden="true"></span>
+    <span class="nav-toggle-bar" aria-hidden="true"></span>
+    <span class="nav-toggle-bar" aria-hidden="true"></span>
+  </button>
+
+  <ul id="primary-nav" class="nav-links">
     <li><a href="#about" data-i18n="nav.about">About</a></li>
     <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
     <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
@@ -49,8 +111,11 @@
     <li><a href="#architecture" data-i18n="nav.architecture">Architecture</a></li>
     <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
   </ul>
+
   <button id="lang-toggle" type="button" class="lang-toggle" data-i18n="nav.toggle" data-i18n-aria-label="nav.toggle.aria" aria-label="Switch to Japanese">日本語</button>
 </nav>
+
+<main id="main">
 
 <!-- ===== HERO ===== -->
 <section id="hero">
@@ -74,6 +139,7 @@
     <div class="hero-cta">
       <a href="#demo" class="btn btn-primary" data-i18n="hero.cta_demo">&#9654; View Live Demo</a>
       <a href="#contact" class="btn btn-secondary" data-i18n="hero.cta_contact">Get in Touch</a>
+      <a href="assets/resume.pdf" class="btn btn-ghost" target="_blank" rel="noopener" data-i18n="hero.cta_resume" download>&#128196; Download Resume</a>
     </div>
 
     <div class="hero-stats">
@@ -304,7 +370,7 @@
 
   <div class="showcase-grid">
     <a class="showcase-card" href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/notebooks/01_eda.ipynb" target="_blank">
-      <img src="assets/img/eda_failure_alignment.png" alt="Sensor 11 aligned to failure across 25 training units" loading="lazy">
+      <img src="assets/img/eda_failure_alignment.png" alt="Sensor 11 aligned to failure across 25 training units" loading="lazy" decoding="async" width="1066" height="466">
       <div class="showcase-body">
         <h4 data-i18n="demo.c1_h">EDA — trajectories aligned to failure</h4>
         <p data-i18n="demo.c1_p">25 training units, sensor 11 plotted vs. cycles before failure. Clean monotonic drift in the last ~80 cycles motivates the piecewise-linear RUL relabelling.</p>
@@ -312,7 +378,7 @@
     </a>
 
     <a class="showcase-card" href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/notebooks/01_eda.ipynb" target="_blank">
-      <img src="assets/img/eda_rul_clipping.png" alt="RUL distribution before and after piecewise-linear clipping at 125 cycles" loading="lazy">
+      <img src="assets/img/eda_rul_clipping.png" alt="RUL distribution before and after piecewise-linear clipping at 125 cycles" loading="lazy" decoding="async" width="1166" height="416">
       <div class="showcase-body">
         <h4 data-i18n="demo.c2_h">RUL distribution — raw vs. clipped</h4>
         <p data-i18n="demo.c2_p">Capping the regression target at 125 cycles concentrates model capacity on the regime where degradation is observable. Heimes (2008) convention.</p>
@@ -320,7 +386,7 @@
     </a>
 
     <a class="showcase-card" href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/notebooks/02_baseline_rul.ipynb" target="_blank">
-      <img src="assets/img/baseline_pred_vs_true.png" alt="Ridge baseline predictions vs true RUL on FD001 test set" loading="lazy">
+      <img src="assets/img/baseline_pred_vs_true.png" alt="Ridge baseline predictions vs true RUL on FD001 test set" loading="lazy" decoding="async" width="666" height="566">
       <div class="showcase-body">
         <h4 data-i18n="demo.c3_h">Ridge baseline — RMSE 18.27 / S-score 592.6</h4>
         <p data-i18n="demo.c3_p">Standard-scaled L2 regression on rolling features. Sets the floor that any non-linear model must clearly beat to justify its complexity.</p>
@@ -328,7 +394,7 @@
     </a>
 
     <a class="showcase-card" href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/notebooks/03_xgboost_rul.ipynb" target="_blank">
-      <img src="assets/img/xgboost_comparison.png" alt="Ridge baseline vs XGBoost predictions side by side" loading="lazy">
+      <img src="assets/img/xgboost_comparison.png" alt="Ridge baseline vs XGBoost predictions side by side" loading="lazy" decoding="async" width="1266" height="581">
       <div class="showcase-body">
         <h4 data-i18n="demo.c4_h">XGBoost head-to-head — RMSE 18.23 / S-score 814.8</h4>
         <p data-i18n="demo.c4_p">Tuned XGBoost edges out Ridge on RMSE but loses on the asymmetric S-score. The honest result: FD001's single regime is exactly where linear features compete with trees.</p>
@@ -336,7 +402,7 @@
     </a>
 
     <a class="showcase-card" href="https://github.com/eastani/predictive-maintenance-cmapss/blob/main/notebooks/03_xgboost_rul.ipynb" target="_blank">
-      <img src="assets/img/xgboost_feature_importance.png" alt="Top 15 XGBoost features by gain" loading="lazy">
+      <img src="assets/img/xgboost_feature_importance.png" alt="Top 15 XGBoost features by gain" loading="lazy" decoding="async" width="966" height="466">
       <div class="showcase-body">
         <h4 data-i18n="demo.c5_h">Feature importance corroborates the EDA</h4>
         <p data-i18n="demo.c5_p">Rolling statistics on high-pressure-compressor sensors dominate — exactly the channels whose drift was visible in the EDA notebook.</p>
@@ -534,26 +600,64 @@
     </p>
 
     <div class="contact-links">
-      <a href="https://www.linkedin.com/in/naoya-higashitani/" class="contact-link" target="_blank">
-        &#128101; LinkedIn
+      <a href="https://www.linkedin.com/in/naoya-higashitani/" class="contact-link" target="_blank" rel="noopener">
+        <span aria-hidden="true">&#128101;</span> LinkedIn
       </a>
-      <a href="https://github.com/eastani" class="contact-link" target="_blank">
-        &#128187; GitHub
+      <a href="https://github.com/eastani" class="contact-link" target="_blank" rel="noopener">
+        <span aria-hidden="true">&#128187;</span> GitHub
       </a>
       <a href="mailto:taquanta777@gmail.com" class="contact-link">
-        &#9993; Email
+        <span aria-hidden="true">&#9993;</span> Email
+      </a>
+      <a href="assets/resume.pdf" class="contact-link" target="_blank" rel="noopener" data-i18n="contact.resume" download>
+        <span aria-hidden="true">&#128196;</span> Resume (PDF)
       </a>
     </div>
   </div>
 </section>
 
+</main>
+
 <!-- ===== FOOTER ===== -->
 <footer>
-  <p data-i18n="footer.text">&copy; 2026 Naoya Higashitani &nbsp;&#183;&nbsp; Data Engineer &nbsp;&#183;&nbsp; Industrial AI</p>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <a href="#hero" class="nav-logo" style="display:inline-block;margin-bottom:0.5rem;">NH.</a>
+      <p style="font-size:0.8rem;line-height:1.6;" data-i18n="footer.tagline">Industrial data engineering &amp; AI for regulated, mission-critical industries.</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title" data-i18n="footer.col_explore">Explore</p>
+      <ul class="footer-links">
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+        <li><a href="#demo" data-i18n="nav.demo">Demo</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title" data-i18n="footer.col_connect">Connect</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/eastani" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/naoya-higashitani/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="mailto:taquanta777@gmail.com">Email</a></li>
+        <li><a href="assets/resume.pdf" target="_blank" rel="noopener" download data-i18n="footer.resume">Resume (PDF)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p data-i18n="footer.text">&copy; 2026 Naoya Higashitani &nbsp;&#183;&nbsp; Data Engineer &nbsp;&#183;&nbsp; Industrial AI</p>
+    <a href="#hero" class="back-to-top" data-i18n="footer.back" aria-label="Back to top">&#8593; Back to top</a>
+  </div>
 </footer>
+
+<!-- Floating back-to-top button (mobile/desktop) -->
+<button id="to-top" type="button" class="to-top" aria-label="Back to top" hidden>
+  <span aria-hidden="true">&#8593;</span>
+</button>
 
 <!-- Charts & i18n -->
 <script src="assets/js/translations.js"></script>
+<script src="assets/js/ui.js"></script>
 <script src="assets/js/charts.js"></script>
 
 </body>

@@ -211,24 +211,85 @@ function drawHealthGauge() {
   Plotly.newPlot('chart-gauge', data, layout, CONFIG);
 }
 
+// ===== PLOTLY LAZY LOAD =====
+// Avoid pulling the ~3 MB Plotly bundle until the user is heading toward
+// the demo section. Returns a promise that resolves once `window.Plotly`
+// is ready (or rejects if the script fails to load).
+const PLOTLY_SRC = 'https://cdn.plot.ly/plotly-2.32.0.min.js';
+let plotlyPromise = null;
+
+function loadPlotly() {
+  if (window.Plotly) return Promise.resolve(window.Plotly);
+  if (plotlyPromise) return plotlyPromise;
+
+  plotlyPromise = new Promise((resolve, reject) => {
+    const s = document.createElement('script');
+    s.src = PLOTLY_SRC;
+    s.async = true;
+    s.onload = () => resolve(window.Plotly);
+    s.onerror = () => {
+      plotlyPromise = null;
+      reject(new Error('Failed to load Plotly'));
+    };
+    document.head.appendChild(s);
+  });
+  return plotlyPromise;
+}
+
 // ===== INIT =====
 document.addEventListener('DOMContentLoaded', () => {
-  // Intersection Observer — draw charts when visible
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting && !e.target.dataset.drawn) {
+  const chartIds = ['chart-sensors', 'chart-rul', 'chart-anomaly', 'chart-gauge'];
+  const drawers = {
+    'chart-sensors': drawSensorChart,
+    'chart-rul':     drawRULChart,
+    'chart-anomaly': drawAnomalyChart,
+    'chart-gauge':   drawHealthGauge,
+  };
+
+  if (!('IntersectionObserver' in window)) {
+    // Fallback: just load Plotly immediately and draw everything.
+    loadPlotly().then(() => chartIds.forEach((id) => {
+      if (document.getElementById(id)) drawers[id]();
+    })).catch(() => {});
+    return;
+  }
+
+  // Pre-warm Plotly when the demo section approaches the viewport (~one screen away).
+  const demo = document.getElementById('demo');
+  if (demo) {
+    const preloadObserver = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          loadPlotly().catch(() => {});
+          preloadObserver.disconnect();
+        }
+      },
+      { rootMargin: '200% 0px' }
+    );
+    preloadObserver.observe(demo);
+  }
+
+  // Draw each chart the first time it scrolls into view (with Plotly ensured).
+  const chartObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (!e.isIntersecting || e.target.dataset.drawn) return;
         e.target.dataset.drawn = '1';
         const id = e.target.id;
-        if (id === 'chart-sensors') drawSensorChart();
-        if (id === 'chart-rul')     drawRULChart();
-        if (id === 'chart-anomaly') drawAnomalyChart();
-        if (id === 'chart-gauge')   drawHealthGauge();
-      }
-    });
-  }, { threshold: 0.2 });
+        loadPlotly()
+          .then(() => drawers[id] && drawers[id]())
+          .catch((err) => {
+            console.warn('[charts] Plotly load failed', err);
+            // Reset so a future retry is possible.
+            delete e.target.dataset.drawn;
+          });
+      });
+    },
+    { threshold: 0.2 }
+  );
 
-  ['chart-sensors','chart-rul','chart-anomaly','chart-gauge'].forEach(id => {
+  chartIds.forEach((id) => {
     const el = document.getElementById(id);
-    if (el) observer.observe(el);
+    if (el) chartObserver.observe(el);
   });
 });

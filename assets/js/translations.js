@@ -8,6 +8,9 @@ const I18N = {
     // ---- Page meta ----
     'meta.title': 'Naoya Higashitani | Data Engineer',
 
+    // ---- Accessibility ----
+    'a11y.skip':         'Skip to main content',
+
     // ---- Nav ----
     'nav.about':        'About',
     'nav.skills':       'Skills',
@@ -17,6 +20,8 @@ const I18N = {
     'nav.contact':      'Contact',
     'nav.toggle':       '日本語',
     'nav.toggle.aria':  'Switch to Japanese',
+    'nav.menu.open':    'Open menu',
+    'nav.menu.close':   'Close menu',
 
     // ---- Hero ----
     'hero.badge':         'Open to new opportunities',
@@ -24,6 +29,7 @@ const I18N = {
     'hero.desc':          'I turn raw industrial sensor data into decisions that hold up on the production floor — building scalable data pipelines, predictive maintenance models, and AI-augmented dashboards for regulated, mission-critical industries.',
     'hero.cta_demo':      '&#9654; See the demo',
     'hero.cta_contact':   'Get in touch',
+    'hero.cta_resume':    '&#128196; Download Resume',
     'hero.stat1':         '4+',
     'hero.stat1_label':   'years in industrial data &amp; quality engineering',
     'hero.stat2':         'AI',
@@ -163,17 +169,26 @@ const I18N = {
     'arch.s_monitor_t':       'Azure Monitor / Grafana',
 
     // ---- Contact ----
-    'contact.label': 'Contact',
-    'contact.title': "Let&apos;s build something<br/><span class=\"accent\">industrial and intelligent</span>",
-    'contact.desc':  'Open to Data Engineer and Data Scientist roles working on industrial AI and IIoT platforms. Casual chats are welcome — feel free to reach out.',
+    'contact.label':  'Contact',
+    'contact.title':  "Let&apos;s build something<br/><span class=\"accent\">industrial and intelligent</span>",
+    'contact.desc':   'Open to Data Engineer and Data Scientist roles working on industrial AI and IIoT platforms. Casual chats are welcome — feel free to reach out.',
+    'contact.resume': '<span aria-hidden="true">&#128196;</span> Resume (PDF)',
 
     // ---- Footer ----
-    'footer.text': '© 2026 Naoya Higashitani &nbsp;&middot;&nbsp; Data Engineer &nbsp;&middot;&nbsp; Industrial AI',
+    'footer.text':        '© 2026 Naoya Higashitani &nbsp;&middot;&nbsp; Data Engineer &nbsp;&middot;&nbsp; Industrial AI',
+    'footer.tagline':     'Industrial data engineering &amp; AI for regulated, mission-critical industries.',
+    'footer.col_explore': 'Explore',
+    'footer.col_connect': 'Connect',
+    'footer.resume':      'Resume (PDF)',
+    'footer.back':        '&#8593; Back to top',
   },
 
   ja: {
     // ---- Page meta ----
     'meta.title': '東谷直哉 | データエンジニア',
+
+    // ---- Accessibility ----
+    'a11y.skip':         'メインコンテンツへスキップ',
 
     // ---- Nav ----
     'nav.about':        '自己紹介',
@@ -184,6 +199,8 @@ const I18N = {
     'nav.contact':      'お問い合わせ',
     'nav.toggle':       'EN',
     'nav.toggle.aria':  '英語に切り替え',
+    'nav.menu.open':    'メニューを開く',
+    'nav.menu.close':   'メニューを閉じる',
 
     // ---- Hero ----
     'hero.badge':         '新しい機会を探しています',
@@ -191,6 +208,7 @@ const I18N = {
     'hero.desc':          '産業現場のセンサーデータを、製造ラインで実際に使われる意思決定につなげる。規制やミッションクリティカル性が問われる産業領域を対象に、スケーラブルなデータパイプライン、予知保全モデル、AIを活かしたダッシュボードを設計・実装しています。',
     'hero.cta_demo':      '&#9654; デモを見る',
     'hero.cta_contact':   'お問い合わせ',
+    'hero.cta_resume':    '&#128196; 履歴書をダウンロード',
     'hero.stat1':         '4+',
     'hero.stat1_label':   '産業データ・品質エンジニアとしての実務年数',
     'hero.stat2':         'AI',
@@ -330,24 +348,40 @@ const I18N = {
     'arch.s_monitor_t':       'Azure Monitor / Grafana',
 
     // ---- Contact ----
-    'contact.label': 'お問い合わせ',
-    'contact.title': '<span class="accent">産業×インテリジェンス</span>を<br/>一緒に形にしませんか？',
-    'contact.desc':  '産業AIやIIoTプラットフォーム領域での、データエンジニア・データサイエンティストの機会に関心があります。カジュアル面談も歓迎ですので、お気軽にご連絡ください。',
+    'contact.label':  'お問い合わせ',
+    'contact.title':  '<span class="accent">産業×インテリジェンス</span>を<br/>一緒に形にしませんか？',
+    'contact.desc':   '産業AIやIIoTプラットフォーム領域での、データエンジニア・データサイエンティストの機会に関心があります。カジュアル面談も歓迎ですので、お気軽にご連絡ください。',
+    'contact.resume': '<span aria-hidden="true">&#128196;</span> 履歴書 (PDF)',
 
     // ---- Footer ----
-    'footer.text': '© 2026 東谷直哉 &nbsp;&middot;&nbsp; データエンジニア &nbsp;&middot;&nbsp; 産業AI',
+    'footer.text':        '© 2026 東谷直哉 &nbsp;&middot;&nbsp; データエンジニア &nbsp;&middot;&nbsp; 産業AI',
+    'footer.tagline':     '規制産業・ミッションクリティカル領域に向けた、産業データエンジニアリングとAI開発。',
+    'footer.col_explore': 'サイト内',
+    'footer.col_connect': 'コンタクト',
+    'footer.resume':      '履歴書 (PDF)',
+    'footer.back':        '&#8593; トップへ戻る',
   },
 };
 
 const STORAGE_KEY = 'portfolio.lang';
 
 function detectInitialLang() {
+  // 1) Explicit ?lang=en|ja in URL wins (used by hreflang alternates / shared links).
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const qp = (params.get('lang') || '').toLowerCase();
+    if (qp && I18N[qp]) return qp;
+  } catch {
+    /* URL parsing unavailable */
+  }
+  // 2) Previously chosen language.
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved && I18N[saved]) return saved;
   } catch {
     /* localStorage unavailable */
   }
+  // 3) Browser preference.
   const nav = (navigator.language || 'en').toLowerCase();
   return nav.startsWith('ja') ? 'ja' : 'en';
 }
