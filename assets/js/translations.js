@@ -8,56 +8,34 @@ const I18N = {
     // ---- Page meta ----
     'meta.title': 'Naoya Higashitani | Data Engineer',
 
+    // ---- Accessibility ----
+    'a11y.skip':         'Skip to main content',
+
     // ---- Nav ----
-    'nav.impact':       'Impact',
     'nav.about':        'About',
     'nav.skills':       'Skills',
     'nav.experience':   'Experience',
     'nav.demo':         'Demo',
-    'nav.process':      'Process',
     'nav.architecture': 'Architecture',
     'nav.contact':      'Contact',
     'nav.toggle':       '日本語',
     'nav.toggle.aria':  'Switch to Japanese',
+    'nav.menu.open':    'Open menu',
+    'nav.menu.close':   'Close menu',
 
     // ---- Hero ----
     'hero.badge':         'Open to new opportunities',
     'hero.title':         'Industrial <span class="highlight">Data Engineer</span><br/>&amp; AI Solutions Builder',
     'hero.desc':          'I turn raw industrial sensor data into decisions that hold up on the production floor — building scalable data pipelines, predictive maintenance models, and AI-augmented dashboards for regulated, mission-critical industries.',
     'hero.cta_demo':      '&#9654; See the demo',
-    'hero.cta_project':   'View GitHub project',
     'hero.cta_contact':   'Get in touch',
+    'hero.cta_resume':    '&#128196; Download Resume',
     'hero.stat1':         '4+',
     'hero.stat1_label':   'years in industrial data &amp; quality engineering',
     'hero.stat2':         'AI',
     'hero.stat2_label':   'predictive maintenance &amp; anomaly detection',
     'hero.stat3':         'Global',
-    'hero.stat3_label':   'cross-border R&amp;D and stakeholder coordination',
-    'hero.visual_label':  'Live project evidence',
-    'hero.visual_title':  'CMAPSS RUL benchmark',
-    'hero.proof_coverage': 'test coverage',
-    'hero.proof_tests':    'tests passing',
-    'hero.proof_cert':     'G-Test certified',
-
-    // ---- Impact ----
-    'impact.label':      'Impact Snapshot',
-    'impact.title':      'Industrial AI that survives contact with the field',
-    'impact.subtitle':   'The common thread across my work is turning messy operational data into systems engineers can trust, maintain, and improve.',
-    'impact.card1_k':    'Reliability',
-    'impact.card1_h':    'Move from dashboards to decisions',
-    'impact.card1_p':    'I design analytics that connect model outputs to field actions: what changed, why it matters, and what a service or quality team should do next.',
-    'impact.card2_k':    'Data Product',
-    'impact.card2_h':    'Make industrial data usable',
-    'impact.card2_p':    'I translate equipment behavior into schemas, features, validation rules, and notebooks that data scientists and domain engineers can both reason about.',
-    'impact.card3_k':    'Execution',
-    'impact.card3_h':    'Bridge R&amp;D, field, and delivery',
-    'impact.card3_p':    'I work across Japanese and English technical teams, keeping requirements, data definitions, experiments, and deployment constraints aligned.',
-    'impact.signal1_h':  'Best fit',
-    'impact.signal1_p':  'Industrial AI, IIoT platforms, predictive maintenance, quality analytics',
-    'impact.signal2_h':  'Strength',
-    'impact.signal2_p':  'Domain-grounded data engineering from raw telemetry to model-ready features',
-    'impact.signal3_h':  'Working style',
-    'impact.signal3_p':  'Hands-on builder, careful communicator, production-minded collaborator',
+    'hero.stat3_label':   'global R&amp;D coordination',
 
     // ---- About ----
     'about.label':       'About Me',
@@ -79,8 +57,8 @@ const I18N = {
     'about.v2_p':        'From raw sensor ingestion (REST / Kafka) through data modelling, cleansing, transformation, and visualisation — I own the full pipeline.',
     'about.v3_h':        'AI-Augmented Solutions',
     'about.v3_p':        'Not just dashboards: ML models and AI agents that turn data patterns into maintenance decisions a field engineer can act on.',
-    'about.v4_h':        'Cloud &amp; DevOps Mindset',
-    'about.v4_p':        'CI/CD-first development with Docker, GitHub Actions, and Azure — building solutions that survive the jump from pilot to production.',
+    'about.v4_h':        'Cloud &amp; DevOps Delivery',
+    'about.v4_p':        'CI/CD-first delivery with Docker, GitHub Actions, and Azure — from pilot to production-ready systems.',
 
     // ---- Skills ----
     'skills.label':       'Technical Skills',
@@ -90,7 +68,7 @@ const I18N = {
     'skills.cat_data':    'Data &amp; ML',
     'skills.cat_cloud':   'Cloud &amp; Infrastructure',
     'skills.cat_viz':     'Data Visualization',
-    'skills.cat_int':     'Integration &amp; APIs',
+    'skills.cat_int':     'APIs &amp; Integration',
     'skills.cat_devops':  'DevOps &amp; Quality',
 
     // ---- Experience ----
@@ -151,19 +129,6 @@ const I18N = {
     'demo.summary_v3':    'Health score &lt; 30%',
     'demo.summary_k4':    'Implementation',
 
-    // ---- Process ----
-    'process.label':    'How I Work',
-    'process.title':    'From equipment signals to operational AI',
-    'process.subtitle': 'A practical workflow for industrial data projects where model quality, domain validity, and deployment constraints all matter.',
-    'process.s1_h':     'Frame the operating problem',
-    'process.s1_p':     'Start from failure modes, maintenance workflows, and business impact before touching the model. The target is a decision, not a chart.',
-    'process.s2_h':     'Build trustworthy data contracts',
-    'process.s2_p':     'Define schemas, sensor semantics, validation checks, and reproducible datasets so experiments are explainable and repeatable.',
-    'process.s3_h':     'Validate against reality',
-    'process.s3_p':     'Compare simple baselines, inspect feature behavior, and test whether the result matches equipment physics and field intuition.',
-    'process.s4_h':     'Package for adoption',
-    'process.s4_p':     'Turn notebooks into tested pipelines, dashboards, alerts, and documentation that service, quality, and R&amp;D teams can actually use.',
-
     // ---- Architecture ----
     'arch.label':    'Architecture',
     'arch.title':    'Data Pipeline Design',
@@ -176,7 +141,7 @@ const I18N = {
     'arch.s_equipment_t':     'Sensors / PLC / DCS',
     'arch.s_protocol':        'OPC-UA / MQTT',
     'arch.s_protocol_t':      'Edge Protocol',
-    'arch.s_extractor':       'Custom Extractor',
+    'arch.s_extractor':       'Extractor',
     'arch.s_extractor_t':     'Python + Docker',
     'arch.s_stream':          'Kafka / REST',
     'arch.s_stream_t':        'Event Streaming',
@@ -204,74 +169,52 @@ const I18N = {
     'arch.s_monitor_t':       'Azure Monitor / Grafana',
 
     // ---- Contact ----
-    'contact.label': 'Contact',
-    'contact.title': "Let&apos;s build something<br/><span class=\"accent\">industrial and intelligent</span>",
-    'contact.desc':  'Open to Data Engineer and Data Scientist roles working on industrial AI and IIoT platforms. Casual chats are welcome — feel free to reach out.',
-    'contact.fit1_k': 'Target roles',
-    'contact.fit1_v': 'Data Engineer / Data Scientist / Industrial AI Engineer',
-    'contact.fit2_k': 'Location',
-    'contact.fit2_v': 'Tokyo / remote-friendly global teams',
-    'contact.fit3_k': 'Languages',
-    'contact.fit3_v': 'Japanese / English technical communication',
+    'contact.label':  'Contact',
+    'contact.title':  "Let&apos;s build something<br/><span class=\"accent\">industrial and intelligent</span>",
+    'contact.desc':   'Open to Data Engineer and Data Scientist roles working on industrial AI and IIoT platforms. Casual chats are welcome — feel free to reach out.',
+    'contact.resume': '<span aria-hidden="true">&#128196;</span> Resume (PDF)',
 
     // ---- Footer ----
-    'footer.text': '© 2026 Naoya Higashitani &nbsp;&middot;&nbsp; Data Engineer &nbsp;&middot;&nbsp; Industrial AI',
+    'footer.text':        '© 2026 Naoya Higashitani &nbsp;&middot;&nbsp; Data Engineer &nbsp;&middot;&nbsp; Industrial AI',
+    'footer.tagline':     'Industrial data engineering &amp; AI for regulated, mission-critical industries.',
+    'footer.col_explore': 'Explore',
+    'footer.col_connect': 'Connect',
+    'footer.resume':      'Resume (PDF)',
+    'footer.back':        '&#8593; Back to top',
   },
 
   ja: {
     // ---- Page meta ----
     'meta.title': '東谷直哉 | データエンジニア',
 
+    // ---- Accessibility ----
+    'a11y.skip':         'メインコンテンツへスキップ',
+
     // ---- Nav ----
-    'nav.impact':       '価値',
     'nav.about':        '自己紹介',
     'nav.skills':       'スキル',
     'nav.experience':   '経歴',
     'nav.demo':         'デモ',
-    'nav.process':      '進め方',
     'nav.architecture': 'アーキテクチャ',
     'nav.contact':      'お問い合わせ',
     'nav.toggle':       'EN',
     'nav.toggle.aria':  '英語に切り替え',
+    'nav.menu.open':    'メニューを開く',
+    'nav.menu.close':   'メニューを閉じる',
 
     // ---- Hero ----
     'hero.badge':         '新しい機会を探しています',
-    'hero.title':         '<span class="highlight">産業データエンジニア</span><br/>× AI ソリューション開発',
+    'hero.title':         '<span class="highlight">産業データ<br/>エンジニア</span><br/>× AI<br/>ソリューション開発',
     'hero.desc':          '産業現場のセンサーデータを、製造ラインで実際に使われる意思決定につなげる。規制やミッションクリティカル性が問われる産業領域を対象に、スケーラブルなデータパイプライン、予知保全モデル、AIを活かしたダッシュボードを設計・実装しています。',
     'hero.cta_demo':      '&#9654; デモを見る',
-    'hero.cta_project':   'GitHubプロジェクトを見る',
     'hero.cta_contact':   'お問い合わせ',
+    'hero.cta_resume':    '&#128196; 履歴書をダウンロード',
     'hero.stat1':         '4+',
     'hero.stat1_label':   '産業データ・品質エンジニアとしての実務年数',
     'hero.stat2':         'AI',
     'hero.stat2_label':   '予知保全と異常検知',
     'hero.stat3':         'Global',
-    'hero.stat3_label':   '海外R&amp;Dとの協業と社内外の調整',
-    'hero.visual_label':  '公開プロジェクト実績',
-    'hero.visual_title':  'CMAPSS RULベンチマーク',
-    'hero.proof_coverage': 'テストカバレッジ',
-    'hero.proof_tests':    'テスト全通過',
-    'hero.proof_cert':     'G検定取得',
-
-    // ---- Impact ----
-    'impact.label':      '提供価値',
-    'impact.title':      '現場で使える産業AIをつくる',
-    'impact.subtitle':   '私の仕事の軸は、扱いづらい運用データを、エンジニアが信頼し、保守し、改善できる仕組みに変えることです。',
-    'impact.card1_k':    '信頼性',
-    'impact.card1_h':    'ダッシュボードから意思決定へ',
-    'impact.card1_p':    'モデルの出力を現場の行動につなげます。何が変わったのか、なぜ重要なのか、サービス・品質チームが次に何をすべきかまで設計します。',
-    'impact.card2_k':    'データプロダクト',
-    'impact.card2_h':    '産業データを使える形にする',
-    'impact.card2_p':    '装置の挙動を、スキーマ、特徴量、検証ルール、再現可能なノートブックに落とし込み、データサイエンス側とドメイン側の双方が議論できる状態にします。',
-    'impact.card3_k':    '推進力',
-    'impact.card3_h':    'R&amp;D・現場・デリバリーをつなぐ',
-    'impact.card3_p':    '日本語・英語の技術チームをまたいで、要求、データ定義、実験、導入制約の認識を揃えながら前に進めます。',
-    'impact.signal1_h':  '得意領域',
-    'impact.signal1_p':  '産業AI、IIoTプラットフォーム、予知保全、品質データ分析',
-    'impact.signal2_h':  '強み',
-    'impact.signal2_p':  '生の運用データからモデル入力までをつなぐ、ドメイン起点のデータエンジニアリング',
-    'impact.signal3_h':  '働き方',
-    'impact.signal3_p':  '手を動かす実装力、丁寧な技術コミュニケーション、本番運用を見据えた設計',
+    'hero.stat3_label':   '海外R&amp;Dとの技術調整',
 
     // ---- About ----
     'about.label':       '自己紹介',
@@ -293,8 +236,8 @@ const I18N = {
     'about.v2_p':        '生センサーデータの取り込み（REST / Kafka）から、モデリング、クレンジング、変換、可視化まで、パイプライン全体を一貫して担えます。',
     'about.v3_h':        'AIを活かしたソリューション',
     'about.v3_p':        'ダッシュボードを並べるだけでは終わりません。データから取り出したパターンを、現場のエンジニアが実際に動ける保守判断へとつなげるMLモデルとAIエージェントを構築します。',
-    'about.v4_h':        'クラウド &amp; DevOps の実践',
-    'about.v4_p':        'Docker、GitHub Actions、Azure を組み合わせたCI/CDファーストの開発で、PoCから本番運用までスケールに耐えるソリューションを作ります。',
+    'about.v4_h':        'クラウド・DevOps実装',
+    'about.v4_p':        'Docker、GitHub Actions、Azure を使い、PoCから本番運用まで見据えたCI/CD基盤を整えます。',
 
     // ---- Skills ----
     'skills.label':       '技術スキル',
@@ -304,7 +247,7 @@ const I18N = {
     'skills.cat_data':    'データ &amp; 機械学習',
     'skills.cat_cloud':   'クラウド &amp; インフラ',
     'skills.cat_viz':     'データ可視化',
-    'skills.cat_int':     'インテグレーション &amp; API',
+    'skills.cat_int':     'API連携',
     'skills.cat_devops':  'DevOps &amp; 品質',
 
     // ---- Experience ----
@@ -365,19 +308,6 @@ const I18N = {
     'demo.summary_v3':    'ヘルススコア &lt; 30%',
     'demo.summary_k4':    '実装',
 
-    // ---- Process ----
-    'process.label':    '進め方',
-    'process.title':    '装置信号から運用されるAIへ',
-    'process.subtitle': 'モデル性能、ドメイン妥当性、導入制約のすべてが重要になる産業データプロジェクトのための実践的な進め方です。',
-    'process.s1_h':     '運用課題を定義する',
-    'process.s1_p':     'モデルからではなく、故障モード、保守フロー、事業インパクトから始めます。目標はグラフではなく、意思決定です。',
-    'process.s2_h':     '信頼できるデータ契約を作る',
-    'process.s2_p':     'スキーマ、センサーの意味、検証チェック、再現可能なデータセットを定義し、説明可能で繰り返せる実験にします。',
-    'process.s3_h':     '現実に照らして検証する',
-    'process.s3_p':     '単純なベースラインと比較し、特徴量の挙動を確認し、結果が装置の物理や現場感覚と矛盾しないかを見ます。',
-    'process.s4_h':     '使われる形にパッケージする',
-    'process.s4_p':     'ノートブックを、テスト済みパイプライン、ダッシュボード、アラート、ドキュメントへ落とし込み、サービス・品質・R&amp;Dチームが使える状態にします。',
-
     // ---- Architecture ----
     'arch.label':    'アーキテクチャ',
     'arch.title':    'データパイプライン設計',
@@ -390,7 +320,7 @@ const I18N = {
     'arch.s_equipment_t':     'センサー / PLC / DCS',
     'arch.s_protocol':        'OPC-UA / MQTT',
     'arch.s_protocol_t':      'エッジプロトコル',
-    'arch.s_extractor':       'カスタムエクストラクター',
+    'arch.s_extractor':       '抽出処理',
     'arch.s_extractor_t':     'Python + Docker',
     'arch.s_stream':          'Kafka / REST',
     'arch.s_stream_t':        'イベントストリーミング',
@@ -414,34 +344,44 @@ const I18N = {
     'arch.s_ci_t':            'CI/CD パイプライン',
     'arch.s_registry':        'コンテナレジストリ',
     'arch.s_registry_t':      'Azure ACR / Docker',
-    'arch.s_monitor':         '監視・運用',
+    'arch.s_monitor':         '監視',
     'arch.s_monitor_t':       'Azure Monitor / Grafana',
 
     // ---- Contact ----
-    'contact.label': 'お問い合わせ',
-    'contact.title': '<span class="accent">産業×インテリジェンス</span>を<br/>一緒に形にしませんか？',
-    'contact.desc':  '産業AIやIIoTプラットフォーム領域での、データエンジニア・データサイエンティストの機会に関心があります。カジュアル面談も歓迎ですので、お気軽にご連絡ください。',
-    'contact.fit1_k': '希望職種',
-    'contact.fit1_v': 'データエンジニア / データサイエンティスト / 産業AIエンジニア',
-    'contact.fit2_k': '拠点',
-    'contact.fit2_v': '東京 / リモート前提のグローバルチーム',
-    'contact.fit3_k': '言語',
-    'contact.fit3_v': '日本語 / 英語での技術コミュニケーション',
+    'contact.label':  'お問い合わせ',
+    'contact.title':  '<span class="accent">産業×インテリジェンス</span>を<br/>一緒に形にしませんか？',
+    'contact.desc':   '産業AIやIIoTプラットフォーム領域での、データエンジニア・データサイエンティストの機会に関心があります。カジュアル面談も歓迎ですので、お気軽にご連絡ください。',
+    'contact.resume': '<span aria-hidden="true">&#128196;</span> 履歴書 (PDF)',
 
     // ---- Footer ----
-    'footer.text': '© 2026 東谷直哉 &nbsp;&middot;&nbsp; データエンジニア &nbsp;&middot;&nbsp; 産業AI',
+    'footer.text':        '© 2026 東谷直哉 &nbsp;&middot;&nbsp; データエンジニア &nbsp;&middot;&nbsp; 産業AI',
+    'footer.tagline':     '規制産業・ミッションクリティカル領域に向けた、産業データエンジニアリングとAI開発。',
+    'footer.col_explore': 'サイト内',
+    'footer.col_connect': 'コンタクト',
+    'footer.resume':      '履歴書 (PDF)',
+    'footer.back':        '&#8593; トップへ戻る',
   },
 };
 
 const STORAGE_KEY = 'portfolio.lang';
 
 function detectInitialLang() {
+  // 1) Explicit ?lang=en|ja in URL wins (used by hreflang alternates / shared links).
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const qp = (params.get('lang') || '').toLowerCase();
+    if (qp && I18N[qp]) return qp;
+  } catch {
+    /* URL parsing unavailable */
+  }
+  // 2) Previously chosen language.
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved && I18N[saved]) return saved;
   } catch {
     /* localStorage unavailable */
   }
+  // 3) Browser preference.
   const nav = (navigator.language || 'en').toLowerCase();
   return nav.startsWith('ja') ? 'ja' : 'en';
 }
