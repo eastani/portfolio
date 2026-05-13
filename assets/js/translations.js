@@ -35,7 +35,7 @@ const I18N = {
     'hero.stat2':         'AI',
     'hero.stat2_label':   'predictive maintenance &amp; anomaly detection',
     'hero.stat3':         'Global',
-    'hero.stat3_label':   'cross-border R&amp;D and stakeholder coordination',
+    'hero.stat3_label':   'global R&amp;D coordination',
 
     // ---- About ----
     'about.label':       'About Me',
@@ -57,8 +57,8 @@ const I18N = {
     'about.v2_p':        'From raw sensor ingestion (REST / Kafka) through data modelling, cleansing, transformation, and visualisation — I own the full pipeline.',
     'about.v3_h':        'AI-Augmented Solutions',
     'about.v3_p':        'Not just dashboards: ML models and AI agents that turn data patterns into maintenance decisions a field engineer can act on.',
-    'about.v4_h':        'Cloud &amp; DevOps Mindset',
-    'about.v4_p':        'CI/CD-first development with Docker, GitHub Actions, and Azure — building solutions that survive the jump from pilot to production.',
+    'about.v4_h':        'Cloud &amp; DevOps Delivery',
+    'about.v4_p':        'CI/CD-first delivery with Docker, GitHub Actions, and Azure — from pilot to production-ready systems.',
 
     // ---- Skills ----
     'skills.label':       'Technical Skills',
@@ -68,7 +68,7 @@ const I18N = {
     'skills.cat_data':    'Data &amp; ML',
     'skills.cat_cloud':   'Cloud &amp; Infrastructure',
     'skills.cat_viz':     'Data Visualization',
-    'skills.cat_int':     'Integration &amp; APIs',
+    'skills.cat_int':     'APIs &amp; Integration',
     'skills.cat_devops':  'DevOps &amp; Quality',
 
     // ---- Experience ----
@@ -141,7 +141,7 @@ const I18N = {
     'arch.s_equipment_t':     'Sensors / PLC / DCS',
     'arch.s_protocol':        'OPC-UA / MQTT',
     'arch.s_protocol_t':      'Edge Protocol',
-    'arch.s_extractor':       'Custom Extractor',
+    'arch.s_extractor':       'Extractor',
     'arch.s_extractor_t':     'Python + Docker',
     'arch.s_stream':          'Kafka / REST',
     'arch.s_stream_t':        'Event Streaming',
@@ -204,7 +204,7 @@ const I18N = {
 
     // ---- Hero ----
     'hero.badge':         '新しい機会を探しています',
-    'hero.title':         '<span class="highlight">産業データエンジニア</span><br/>× AI ソリューション開発',
+    'hero.title':         '<span class="highlight">産業データ<br/>エンジニア</span><br/>× AI<br/>ソリューション開発',
     'hero.desc':          '産業現場のセンサーデータを、製造ラインで実際に使われる意思決定につなげる。規制やミッションクリティカル性が問われる産業領域を対象に、スケーラブルなデータパイプライン、予知保全モデル、AIを活かしたダッシュボードを設計・実装しています。',
     'hero.cta_demo':      '&#9654; デモを見る',
     'hero.cta_contact':   'お問い合わせ',
@@ -214,7 +214,7 @@ const I18N = {
     'hero.stat2':         'AI',
     'hero.stat2_label':   '予知保全と異常検知',
     'hero.stat3':         'Global',
-    'hero.stat3_label':   '海外R&amp;Dとの協業と社内外の調整',
+    'hero.stat3_label':   '海外R&amp;Dとの技術調整',
 
     // ---- About ----
     'about.label':       '自己紹介',
@@ -236,8 +236,8 @@ const I18N = {
     'about.v2_p':        '生センサーデータの取り込み（REST / Kafka）から、モデリング、クレンジング、変換、可視化まで、パイプライン全体を一貫して担えます。',
     'about.v3_h':        'AIを活かしたソリューション',
     'about.v3_p':        'ダッシュボードを並べるだけでは終わりません。データから取り出したパターンを、現場のエンジニアが実際に動ける保守判断へとつなげるMLモデルとAIエージェントを構築します。',
-    'about.v4_h':        'クラウド &amp; DevOps の実践',
-    'about.v4_p':        'Docker、GitHub Actions、Azure を組み合わせたCI/CDファーストの開発で、PoCから本番運用までスケールに耐えるソリューションを作ります。',
+    'about.v4_h':        'クラウド・DevOps実装',
+    'about.v4_p':        'Docker、GitHub Actions、Azure を使い、PoCから本番運用まで見据えたCI/CD基盤を整えます。',
 
     // ---- Skills ----
     'skills.label':       '技術スキル',
@@ -247,7 +247,7 @@ const I18N = {
     'skills.cat_data':    'データ &amp; 機械学習',
     'skills.cat_cloud':   'クラウド &amp; インフラ',
     'skills.cat_viz':     'データ可視化',
-    'skills.cat_int':     'インテグレーション &amp; API',
+    'skills.cat_int':     'API連携',
     'skills.cat_devops':  'DevOps &amp; 品質',
 
     // ---- Experience ----
@@ -320,7 +320,7 @@ const I18N = {
     'arch.s_equipment_t':     'センサー / PLC / DCS',
     'arch.s_protocol':        'OPC-UA / MQTT',
     'arch.s_protocol_t':      'エッジプロトコル',
-    'arch.s_extractor':       'カスタムエクストラクター',
+    'arch.s_extractor':       '抽出処理',
     'arch.s_extractor_t':     'Python + Docker',
     'arch.s_stream':          'Kafka / REST',
     'arch.s_stream_t':        'イベントストリーミング',
@@ -344,7 +344,7 @@ const I18N = {
     'arch.s_ci_t':            'CI/CD パイプライン',
     'arch.s_registry':        'コンテナレジストリ',
     'arch.s_registry_t':      'Azure ACR / Docker',
-    'arch.s_monitor':         '監視・運用',
+    'arch.s_monitor':         '監視',
     'arch.s_monitor_t':       'Azure Monitor / Grafana',
 
     // ---- Contact ----
