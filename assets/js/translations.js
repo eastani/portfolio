@@ -25,11 +25,10 @@ const I18N = {
 
     // ---- Hero ----
     'hero.badge':         'Open to new opportunities',
-    'hero.title':         'Industrial <span class="highlight">Data Engineer</span><br/>&amp; AI Solutions Builder',
-    'hero.desc':          'I turn raw industrial sensor data into decisions that hold up on the production floor — building scalable data pipelines, predictive maintenance models, and AI-augmented dashboards for regulated, mission-critical industries.',
-    'hero.cta_demo':      '&#9654; See the demo',
+    'hero.title':         'Industrial Data <span class="highlight">&amp; AI</span> Solutions Builder',
+    'hero.desc':          '<p>As an engineer focused on industrial data, my role is to analyze operational data and connect it to better decision-making. I focus especially on regulated and mission-critical industrial domains, designing and implementing scalable data pipelines, predictive maintenance models, and dashboards powered by AI.</p><p>This approach optimizes the flow of data and accelerates decision-making, helping organizations improve operational efficiency while maintaining competitiveness. Through technical innovation, it contributes to productivity, risk management, and sustainable growth.</p>',
+    'hero.cta_demo':      'See the demo',
     'hero.cta_contact':   'Get in touch',
-    'hero.cta_resume':    '&#128196; Download Resume',
     'hero.stat1':         '4+',
     'hero.stat1_label':   'years in industrial data &amp; quality engineering',
     'hero.stat2':         'AI',
@@ -40,7 +39,7 @@ const I18N = {
     // ---- About ----
     'about.label':       'About Me',
     'about.title':       'Turning Industrial Data<br/>into <span class="accent">Operational Intelligence</span>',
-    'about.p1':          'I&apos;m an engineer working where data, AI, and product reliability meet — building and operating predictive maintenance, quality analytics, and design-verification workflows for globally deployed precision instruments in highly regulated industries.',
+    'about.p1':          'Working where data, AI, and product reliability meet, I build and operate predictive maintenance, quality analytics, and design-verification workflows for globally deployed precision instruments in highly regulated industries.',
     'about.p2':          'At Hitachi High-Technologies I contribute to fleet-scale AI predictive maintenance projects in close collaboration with international R&amp;D partners, lead root-cause analytics on operational telemetry, and bridge equipment domain knowledge to the data-science teams that turn it into shippable models.',
     'about.p3':          'Closing the OT / IT gap in regulated, mission-critical industries is the work I find most meaningful. I do my best work when data engineering and hands-on domain expertise come together to move the needle on reliability and cost.',
     'about.tag1':        'Predictive Maintenance',
@@ -63,7 +62,7 @@ const I18N = {
     // ---- Skills ----
     'skills.label':       'Technical Skills',
     'skills.title':       'Stack &amp; Tooling',
-    'skills.subtitle':    'Covering the full industrial data &amp; AI engineering lifecycle — from edge sensor to executive dashboard.',
+    'skills.subtitle':    '',
     'skills.cat_lang':    'Languages',
     'skills.cat_data':    'Data &amp; ML',
     'skills.cat_cloud':   'Cloud &amp; Infrastructure',
@@ -94,8 +93,8 @@ const I18N = {
     'demo.stat_tests':    'tests passing',
     'demo.stat_py':       'Python matrix CI',
     'demo.stat_lic':      'licensed',
-    'demo.cta_github':    '&#128187; View on GitHub',
-    'demo.cta_readme':    '&#128214; Read the README',
+    'demo.cta_github':    'View on GitHub',
+    'demo.cta_readme':    'Read the README',
     'demo.results_label': 'Results from the executed notebooks',
     'demo.results_h':     'Real benchmarks on FD001',
     'demo.results_p':     'Every figure below is rendered straight from the corresponding executed notebook in the repo — click any card to open the full notebook on GitHub.',
@@ -132,7 +131,7 @@ const I18N = {
     // ---- Architecture ----
     'arch.label':    'Architecture',
     'arch.title':    'Data Pipeline Design',
-    'arch.subtitle': 'End-to-end industrial data flow aligned with Cognite Data Fusion&apos;s integration model.',
+    'arch.subtitle': 'Example E2E data flow',
     'arch.row1':     '01 — Data Sources &amp; Ingestion',
     'arch.row2':     '02 — Processing &amp; Contextualization',
     'arch.row3':     '03 — AI / Intelligence Layer',
@@ -172,15 +171,13 @@ const I18N = {
     'contact.label':  'Contact',
     'contact.title':  "Let&apos;s build something<br/><span class=\"accent\">industrial and intelligent</span>",
     'contact.desc':   'Open to Data Engineer and Data Scientist roles working on industrial AI and IIoT platforms. Casual chats are welcome — feel free to reach out.',
-    'contact.resume': '<span aria-hidden="true">&#128196;</span> Resume (PDF)',
 
     // ---- Footer ----
     'footer.text':        '© 2026 Naoya Higashitani &nbsp;&middot;&nbsp; Data Engineer &nbsp;&middot;&nbsp; Industrial AI',
-    'footer.tagline':     'Industrial data engineering &amp; AI for regulated, mission-critical industries.',
+    'footer.tagline':     '',
     'footer.col_explore': 'Explore',
     'footer.col_connect': 'Connect',
-    'footer.resume':      'Resume (PDF)',
-    'footer.back':        '&#8593; Back to top',
+    'footer.back':        'Back to top',
   },
 
   ja: {
@@ -204,11 +201,10 @@ const I18N = {
 
     // ---- Hero ----
     'hero.badge':         '新しい機会を探しています',
-    'hero.title':         '<span class="highlight">産業データ<br/>エンジニア</span><br/>× AI<br/>ソリューション開発',
-    'hero.desc':          '産業現場のセンサーデータを、製造ラインで実際に使われる意思決定につなげる。規制やミッションクリティカル性が問われる産業領域を対象に、スケーラブルなデータパイプライン、予知保全モデル、AIを活かしたダッシュボードを設計・実装しています。',
-    'hero.cta_demo':      '&#9654; デモを見る',
+    'hero.title':         '<span class="highlight">産業データ×AI</span><br/>ソリューション開発',
+    'hero.desc':          '<p>産業上のデータを主としたエンジニアとしての役割は、現場におけるデータを分析し、それを意思決定に結びつけることにあります。特に、規制やミッションクリティカルな要素が関与する産業領域に焦点を当て、スケーラブルなデータパイプライン、予知保全モデル、並びにAI技術を駆使したダッシュボードの設計および実装を行っています。</p><p>このアプローチにより、データの流れを最適化し、意思決定の迅速化を図ることができるため、企業は競争力を保ちつつ、運用効率を向上させることが可能です。このような取り組みは、技術革新を通じて、生産性向上とリスク管理に寄与し、持続可能な発展をサポートいたします。</p>',
+    'hero.cta_demo':      'デモを見る',
     'hero.cta_contact':   'お問い合わせ',
-    'hero.cta_resume':    '&#128196; 履歴書をダウンロード',
     'hero.stat1':         '4+',
     'hero.stat1_label':   '産業データ・品質エンジニアとしての実務年数',
     'hero.stat2':         'AI',
@@ -219,7 +215,7 @@ const I18N = {
     // ---- About ----
     'about.label':       '自己紹介',
     'about.title':       '産業データを<br/><span class="accent">現場で活きる知見</span>へ',
-    'about.p1':          'データ・AI・プロダクト信頼性が交わる領域で働くエンジニアです。規制の厳しい業界で世界各地に展開されている精密機器を対象に、予知保全・品質分析・設計検証のワークフローを構築・運用しています。',
+    'about.p1':          'データ・AI・プロダクト信頼性が交わる領域で、規制の厳しい業界で世界各地に展開されている精密機器を対象に、予知保全・品質分析・設計検証のワークフローを構築・運用しています。',
     'about.p2':          '日立ハイテクでは、海外R&amp;Dパートナーと密に連携しながら、世界中で稼働する機器を対象としたフリート規模のAI予知保全に取り組んでいます。運用データの根本原因分析を主導するとともに、現場のドメイン知識をデータサイエンスチームへ橋渡しし、製品レベルでのモデル実装まで支える役割を担っています。',
     'about.p3':          'OTとITをつなぐ仕事に、最もやりがいを感じます。データエンジニアリングと現場のドメイン知識が組み合わさり、信頼性とコストの両面で実利を生む — そういう仕事を大事にしてきました。',
     'about.tag1':        '予知保全',
@@ -242,7 +238,7 @@ const I18N = {
     // ---- Skills ----
     'skills.label':       '技術スキル',
     'skills.title':       'スタック &amp; ツール',
-    'skills.subtitle':    '産業データとAIのエンジニアリング・ライフサイクル全体をカバーします — 現場のセンサーから経営ダッシュボードまで。',
+    'skills.subtitle':    '',
     'skills.cat_lang':    '言語',
     'skills.cat_data':    'データ &amp; 機械学習',
     'skills.cat_cloud':   'クラウド &amp; インフラ',
@@ -273,10 +269,10 @@ const I18N = {
     'demo.stat_tests':    'テスト全通過',
     'demo.stat_py':       'Python マトリクス CI',
     'demo.stat_lic':      'ライセンス',
-    'demo.cta_github':    '&#128187; GitHub で見る',
-    'demo.cta_readme':    '&#128214; README を読む',
+    'demo.cta_github':    'GitHub で見る',
+    'demo.cta_readme':    'README を読む',
     'demo.results_label': 'ノートブックの実行結果',
-    'demo.results_h':     'FD001 での実ベンチマーク',
+    'demo.results_h':     'FD001 を用いたベンチマーク',
     'demo.results_p':     '以下の図はすべて、リポジトリ内の実行済みノートブックから直接生成したものです。カードをクリックすると、GitHub上で対応するノートブックを開けます。',
     'demo.c1_h':          'EDA — 故障時点に揃えた軌跡',
     'demo.c1_p':          '訓練データ25ユニットのセンサー11を、故障までの残りサイクル数で揃えてプロット。最後の約80サイクルで明確な単調ドリフトが見られ、区分線形RULラベルを採用する根拠になっている。',
@@ -311,7 +307,7 @@ const I18N = {
     // ---- Architecture ----
     'arch.label':    'アーキテクチャ',
     'arch.title':    'データパイプライン設計',
-    'arch.subtitle': 'Cognite Data Fusionの統合モデルに沿った、エンドツーエンドの産業データフロー。',
+    'arch.subtitle': 'E2Eのデータフロー例',
     'arch.row1':     '01 — データソース &amp; 取り込み',
     'arch.row2':     '02 — 処理 &amp; コンテキスト付与',
     'arch.row3':     '03 — AI / インテリジェンス層',
@@ -351,15 +347,13 @@ const I18N = {
     'contact.label':  'お問い合わせ',
     'contact.title':  '<span class="accent">産業×インテリジェンス</span>を<br/>一緒に形にしませんか？',
     'contact.desc':   '産業AIやIIoTプラットフォーム領域での、データエンジニア・データサイエンティストの機会に関心があります。カジュアル面談も歓迎ですので、お気軽にご連絡ください。',
-    'contact.resume': '<span aria-hidden="true">&#128196;</span> 履歴書 (PDF)',
 
     // ---- Footer ----
     'footer.text':        '© 2026 東谷直哉 &nbsp;&middot;&nbsp; データエンジニア &nbsp;&middot;&nbsp; 産業AI',
-    'footer.tagline':     '規制産業・ミッションクリティカル領域に向けた、産業データエンジニアリングとAI開発。',
+    'footer.tagline':     '',
     'footer.col_explore': 'サイト内',
     'footer.col_connect': 'コンタクト',
-    'footer.resume':      '履歴書 (PDF)',
-    'footer.back':        '&#8593; トップへ戻る',
+    'footer.back':        'トップへ戻る',
   },
 };
 

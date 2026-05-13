@@ -232,6 +232,8 @@ section { padding: 6rem 6%; }
   font-size: 1.1rem; color: var(--text-muted);
   max-width: 560px; margin-bottom: 2.5rem; line-height: 1.7;
 }
+.hero-desc p { color: var(--text-muted); }
+.hero-desc p + p { margin-top: 1rem; }
 
 .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
 
